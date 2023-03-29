@@ -5,8 +5,8 @@ import { atomWithLocation } from "jotai-location";
 import { atomsWithQuery } from "jotai-tanstack-query";
 import { atom } from "jotai/vanilla";
 import { useAtomValue, useSetAtom } from "jotai/react";
-import { chatStateAtom, OperatingMode } from "../components/chat/chat";
-import { ChatBox } from "../components/chat/box";
+import { chatStateAtom, OperatingMode } from "../../components/chat/chat";
+import { ChatBox } from "../../components/chat/box";
 
 const locationAtom = atomWithLocation();
 const rawStateAtom = atom<QueryState>(queryStateInit);

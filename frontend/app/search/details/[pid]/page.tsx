@@ -1,6 +1,6 @@
 // import useSWR, { preload } from "swr";
-import { searchClient } from "../../../service/client";
-import ClientJsonTree from "../../../components/json";
+import { searchClient } from "../../../../service/client";
+import ClientJsonTree from "../../../../components/json";
 
 const Detail = async ({ params }: { params: { pid: string } }) => {
   const pid = params.pid;
