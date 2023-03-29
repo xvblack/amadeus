@@ -1,0 +1,6 @@
+POST http://127.0.0.1:3000/api/pocket/sync-pocket HTTP/1.1
+content-type: application/json
+
+{
+  "limit": 10
+}

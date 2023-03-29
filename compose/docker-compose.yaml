@@ -1,0 +1,108 @@
+version: '3.3'
+services:
+  amadeus:
+    container_name: amadeus
+    restart: always
+    ports:
+      - 8090:3000
+    build:
+      context: ../frontend/
+      dockerfile: Dockerfile
+    image: xvblack/amadeus
+    environment:
+      - NO_PROXY=crawler,gpt-cache,typesense,edgedb-agta,postgres
+      - TYPESENSE_ADDR=http://typesense:8108/
+      - TYPESENSE_API_KEY=${TYPESENSE_API_KEY}
+      - TYPESENSE_INDEX_NAME=${TYPESENSE_INDEX_NAME}
+      - REDIS_SERVER=redis://gpt-cache:6379
+      - EDGEDB_BIN=/app/edgedb
+      - AGTA_EDGEDB_SCHEMA_DIR=/edgedb-schema
+      - AGTA_EDGEDB_DSN=edgedb://edgedb@edgedb-agta:5656/edgedb
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+      - POCKET_CONSUMER_KEY=${POCKET_CONSUMER_KEY}
+      - POCKET_ACCESS_TOKEN=${POCKET_ACCESS_TOKEN}
+      - AMADEUS_POSTGRES_DATABASE_URL=postgres://postgres:${AMADEUS_POSTGRES_DATABASE_PASSWORD}@postgres:5432/amadeus
+      - INDEXER_ADDR=http://crawler:8000
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.amadeus.rule=Host(`amadeus.home.xasy.dev`)"
+      - "traefik.http.routers.amadeus.tls=true"
+      - "traefik.http.routers.amadeus.tls.certresolver=myresolver"
+    networks:
+      - default
+    volumes:
+      - "amadeus-agta-schema:/edgedb-schema"
+  crawler:
+    container_name: crawler
+    build:
+      context: ../crawler/
+      dockerfile: Dockerfile
+    image: xvblack/amadeus-crawler
+    environment:
+      - CRAWL_CACHE_DIR=/data
+      - HTTP_PROXY=http://clash:7890
+      - HTTPS_PROXY=http://clash:7890
+      - http_proxy=http://clash:7890
+      - https_proxy=http://clash:7890
+    restart: unless-stopped
+    volumes:
+      - "crawler:/data"
+    ports:
+      - "8092:8000"
+    networks:
+      - default
+  gpt-cache:
+    container_name: gpt-cache
+    image: redis:latest
+    ports:
+      - "8093:6379"
+    restart: unless-stopped
+    networks:
+      - default
+  edgedb-agta:
+    container_name: edgedb-agta
+    image: edgedb/edgedb:2.12
+    environment:
+      - EDGEDB_SERVER_SECURITY=insecure_dev_mode
+    restart: unless-stopped
+    volumes:
+      - "edgedb-data:/var/lib/edgedb/data"
+    ports:
+      - "8094:5656"
+    networks:
+      - default
+  typesense:
+    container_name: typesense
+    restart: unless-stopped
+    ports:
+      - 8095:8108
+    volumes:
+      - 'typesense:/data'
+    image: 'typesense/typesense:0.23.1'
+    environment:
+      - TYPESENSE_API_KEY=${TYPESENSE_API_KEY}
+    command: --data-dir /data --api-key=xyz
+    networks:
+      - default
+  postgres:
+    container_name: postgres
+    image: postgres:15.2
+    restart: unless-stopped
+    environment:
+      - POSTGRES_PASSWORD=mypostgrespassword
+    ports:
+      - "8091:5432"
+    networks:
+      - default
+    
+
+volumes:
+  typesense:
+  crawler:
+  amadeus-agta-schema:
+  edgedb-schema:
+  edgedb-data:
+
+networks:
+  default:
+    name: amadeus_default

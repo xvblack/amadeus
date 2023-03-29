@@ -1,0 +1,4 @@
+
+DELETE http://192.168.31.181:8095/collections/post-20230328
+Content-Type: application/json
+X-TYPESENSE-API-KEY: xyz

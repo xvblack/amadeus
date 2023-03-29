@@ -1,0 +1,11 @@
+POST http://127.0.0.1:8000/index-post HTTP/1.1
+# POST http://192.168.31.181:8031/index-post HTTP/1.1
+content-type: application/json
+
+{
+  "url": "https://news.ycombinator.com/item?id=35180392",
+  "time_added": 1679057619,
+  "tags": [],
+  "source": "save",
+  "attrs": {}
+}

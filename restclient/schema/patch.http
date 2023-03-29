@@ -1,0 +1,13 @@
+PATCH http://192.168.31.181:8108/collections/pocket-index
+Content-Type: application/json
+X-TYPESENSE-API-KEY: xyz
+       
+{
+  "fields": [
+    {
+      "name": "post_id",
+      "type": "string",
+      "optional": true
+    }
+  ]
+}
