@@ -1,6 +1,6 @@
-import { typedFetch } from "../utils/fetch";
+import { typedFetch } from "../components/utils/fetch";
 import { indexClient } from "./client";
-import { Post } from "../common/type";
+import { Post } from "../shared/search/type";
 
 export const enrichPost = async (post: Post) => {
   const response = await typedFetch<Post>({

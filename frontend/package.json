@@ -17,8 +17,6 @@
     "@types/jsdom": "^21.1.0",
     "@types/uuid": "^9.0.0",
     "dagre": "^0.8.5",
-    "datascript": "^1.4.0",
-    "datascript-mori": "^0.17.0",
     "dotenv-cli": "^7.0.0",
     "edgedb": "^1.1.0",
     "edn-data": "^1.0.0",

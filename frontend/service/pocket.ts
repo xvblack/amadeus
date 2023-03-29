@@ -1,5 +1,5 @@
-import { typedFetch } from "../utils/fetch";
-import { Post } from "../common/type";
+import { typedFetch } from "../components/utils/fetch";
+import { Post } from "../shared/search/type";
 
 const { convert } = require("html-to-text");
 

@@ -1,4 +1,4 @@
-import { Post } from "../common/type";
+import { Post } from "../shared/search/type";
 import { PrismaClient } from "@prisma/client";
 
 const prisma = new PrismaClient();
