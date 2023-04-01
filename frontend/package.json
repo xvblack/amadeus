@@ -16,6 +16,7 @@
     "@types/dagre": "^0.7.48",
     "@types/jsdom": "^21.1.0",
     "@types/uuid": "^9.0.0",
+    "canvas": "^2.11.0",
     "dagre": "^0.8.5",
     "dotenv-cli": "^7.0.0",
     "edgedb": "^1.1.0",

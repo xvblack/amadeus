@@ -1,8 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import pLimit from "p-limit";
 import { retrieveAllPosts } from "../../../../service/pocket";
-import { enrichPost, indexPost } from "../../../../service/post";
-import { savePocketPost } from "../../../../service/db";
+import { saveAndIndexPost } from "../../../../service/post/post";
 import { redis } from "../../../../service/client";
 
 export interface SyncPocketRequest {
@@ -49,10 +48,7 @@ export const trySyncPocket = async (params: SyncPocketRequest) => {
         return lock(async () => {
           try {
             console.log(`Processing ${post.url}`);
-            const enriched = await enrichPost(post);
-            delete enriched["id"];
-            const saved = await savePocketPost(enriched);
-            const indexed = await indexPost(saved);
+            const indexed = await saveAndIndexPost(post);
             console.log(`Indexed ${post.url}`);
             return {
               url: post.url,

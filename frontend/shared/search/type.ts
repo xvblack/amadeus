@@ -9,4 +9,5 @@ export interface Post {
   links: Record<string, string>;
   title?: string;
   abstract?: string;
+  content?: string;
 }

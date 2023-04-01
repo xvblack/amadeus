@@ -1,11 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
-import {
-  fetchPost,
-  savePocketPost,
-  savePocketPosts,
-} from "../../../../service/db";
-import { archivePost, retrieveAllPosts } from "../../../../service/pocket";
-import { enrichPost, indexPost } from "../../../../service/post";
+import { fetchPost } from "../../../../service/post/db";
+import { archivePost } from "../../../../service/pocket";
+import { saveAndIndexPost } from "../../../../service/post/post";
 
 export async function POST(req: NextRequest) {
   const params = await req.json();
@@ -24,11 +20,10 @@ export async function POST(req: NextRequest) {
     source: "pocket",
     url,
   });
-  const updatedPost = {
+  const newPost = {
     ...currentPost,
     tags: currentPost.tags.filter((tag) => tag.indexOf("unread") === -1),
   };
-  await savePocketPost(updatedPost);
-  await indexPost(await enrichPost(updatedPost));
+  await saveAndIndexPost(newPost);
   return NextResponse.json({});
 }
