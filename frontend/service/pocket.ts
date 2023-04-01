@@ -1,5 +1,6 @@
 import { typedFetch } from "../components/utils/fetch";
 import { Post } from "../shared/search/type";
+import { logger } from "./logger";
 
 const { convert } = require("html-to-text");
 
@@ -38,7 +39,7 @@ export const retrieveAllPosts = async ({
   });
 
   if (response.error !== undefined) {
-    console.log("Failed to fetch from pocket", response.error);
+    logger.error("Failed to fetch from pocket %o", response.error);
     throw response.error;
   }
 

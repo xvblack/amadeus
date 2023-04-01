@@ -1,5 +1,5 @@
-
-POST http://192.168.31.181:8095/collections
+# POST http://192.168.31.181:8095/collections
+POST http://localhost:8095/collections
 Content-Type: application/json
 X-TYPESENSE-API-KEY: xyz
 
@@ -15,7 +15,7 @@ X-TYPESENSE-API-KEY: xyz
     {"name": "title", "type": "string"},
     {"name": "abstract", "type": "string"},
     {"name": "content", "type": "string"},
-    {"name": "html", "type": "string"},
+    {"name": "html", "type": "string", "optional": true},
     {"name": ".*", "type": "auto"}
   ],
   "default_sorting_field": "time_added"

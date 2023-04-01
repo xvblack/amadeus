@@ -10,33 +10,25 @@ services:
       dockerfile: Dockerfile
     image: xvblack/amadeus
     environment:
-      - NO_PROXY=gpt-cache,typesense,edgedb-agta,postgres
       - TYPESENSE_ADDR=http://typesense:8108/
       - TYPESENSE_API_KEY=${TYPESENSE_API_KEY}
       - TYPESENSE_INDEX_NAME=${TYPESENSE_INDEX_NAME}
       - REDIS_SERVER=redis://gpt-cache:6379
-      - EDGEDB_BIN=/app/edgedb
-      - AGTA_EDGEDB_SCHEMA_DIR=/edgedb-schema
-      - AGTA_EDGEDB_DSN=edgedb://edgedb@edgedb-agta:5656/edgedb
       - OPENAI_API_KEY=${OPENAI_API_KEY}
       - POCKET_CONSUMER_KEY=${POCKET_CONSUMER_KEY}
       - POCKET_ACCESS_TOKEN=${POCKET_ACCESS_TOKEN}
       - AMADEUS_POSTGRES_DATABASE_URL=postgres://postgres:${AMADEUS_POSTGRES_DATABASE_PASSWORD}@postgres:5432/amadeus
-    labels:
-      - "traefik.enable=true"
-      - "traefik.http.routers.amadeus.rule=Host(`amadeus.home.xasy.dev`)"
-      - "traefik.http.routers.amadeus.tls=true"
-      - "traefik.http.routers.amadeus.tls.certresolver=myresolver"
     networks:
       - default
-    volumes:
-      - "amadeus-agta-schema:/edgedb-schema"
   postgres:
     container_name: postgres
     image: postgres:15.2
     restart: unless-stopped
     environment:
-      - POSTGRES_PASSWORD=mypostgrespassword
+      - POSTGRES_PASSWORD=${AMADEUS_POSTGRES_DATABASE_PASSWORD}
+      - PGDATA=/var/lib/postgresql/data/pgdata
+    volumes:
+      - 'postgres-data:/var/lib/postgresql/data/pgdata'
     ports:
       - "8091:5432"
     networks:
@@ -57,30 +49,13 @@ services:
     volumes:
       - 'typesense:/data'
     image: 'typesense/typesense:0.23.1'
-    environment:
-      - TYPESENSE_API_KEY=${TYPESENSE_API_KEY}
-    command: --data-dir /data --api-key=xyz
+    command: --data-dir /data --api-key=${TYPESENSE_API_KEY}
     networks:
       - default
-  edgedb-agta:
-    container_name: edgedb-agta
-    image: edgedb/edgedb:2.12
-    environment:
-      - EDGEDB_SERVER_SECURITY=insecure_dev_mode
-    restart: unless-stopped
-    volumes:
-      - "edgedb-data:/var/lib/edgedb/data"
-    ports:
-      - "8094:5656"
-    networks:
-      - default
-    
 
 volumes:
   typesense:
-  amadeus-agta-schema:
-  edgedb-schema:
-  edgedb-data:
+  postgres-data:
 
 networks:
   default:

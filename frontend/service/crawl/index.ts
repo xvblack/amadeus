@@ -1,6 +1,7 @@
-import { Post } from "../../shared/search/type";
 import { JSDOM } from "jsdom";
 import { Readability } from "@mozilla/readability";
+import axios from "axios";
+import { logger } from "../logger";
 
 const TWITTER_PATTERN =
   /https:\/\/twitter.com\/([a-zA-Z0-9_-]+)\/status\/(\d+)/;
@@ -58,6 +59,9 @@ export const parseContent = async (url: string): Promise<Content> => {
 
 const enrichTwitter = async (url: string) => {
   const match = url.match(TWITTER_PATTERN);
+  if (!match) {
+    throw "Unexpect";
+  }
   const publishUrl = `https://publish.twitter.com/oembed?dnt=true&omit_script=true&url=https://mobile.twitter.com/i/status/${match[1]}`;
   const json = await (
     await fetch(publishUrl, {
@@ -75,24 +79,23 @@ const enrichTwitter = async (url: string) => {
 };
 
 const enrichRawHtml = async (url: string): Promise<Content> => {
-  const response = await fetch(url, {
-    redirect: "follow",
-    cache: "no-store",
-  });
+  const response = await axios.get(url);
 
   if (response.status >= 400) {
     throw "Unable to connect";
   }
-  const contentType = response.headers.get("Content-Type") ?? "text/plain";
+  const contentType =
+    (response.headers["content-type"] as string | undefined) ??
+    "application/unknown";
   if (contentType.startsWith("text/plain")) {
-    const content = await response.text();
+    const content = response.data as string;
     return {
       title: content.split("\n")[0],
       content: content,
       tags: [],
     };
   } else if (contentType.startsWith("text/html")) {
-    const content = await response.text();
+    const content = response.data;
     const article = htmlToArticle(content);
     if (!article) {
       throw "Failed to parse";

@@ -1,0 +1,340 @@
+{"level":30,"time":1680318831999,"pid":20611,"hostname":"Ches-MacBook-Pro.local","msg":"Received sync pocket request"}
+{"level":30,"time":1680318832002,"pid":20611,"hostname":"Ches-MacBook-Pro.local","msg":"Received sync pocket request"}
+{"level":30,"time":1680318833259,"pid":20611,"hostname":"Ches-MacBook-Pro.local","msg":"Fetched "}
+{"level":30,"time":1680318833260,"pid":20611,"hostname":"Ches-MacBook-Pro.local","msg":"Processing https://waitbutwhy.com/2014/05/fermi-paradox.html"}
+{"level":30,"time":1680318833261,"pid":20611,"hostname":"Ches-MacBook-Pro.local","msg":"Processing http://kadekillary.work/"}
+{"level":30,"time":1680318833262,"pid":20611,"hostname":"Ches-MacBook-Pro.local","msg":"Processing https://mitadmissions.org/blogs/entry/how-to-draw-dotted-lines-on-chalkboards-mit-style/"}
+{"level":30,"time":1680318833262,"pid":20611,"hostname":"Ches-MacBook-Pro.local","msg":"Processing https://github.com/twitter/the-algorithm"}
+{"level":30,"time":1680318833263,"pid":20611,"hostname":"Ches-MacBook-Pro.local","msg":"Processing https://github.com/rosefromthedead/effing-mad"}
+{"level":30,"time":1680318833264,"pid":20611,"hostname":"Ches-MacBook-Pro.local","msg":"Processing https://www.fixie.ai/"}
+{"level":30,"time":1680318833264,"pid":20611,"hostname":"Ches-MacBook-Pro.local","msg":"Processing https://github.com/HigherOrderCO/HVM"}
+{"level":30,"time":1680318833265,"pid":20611,"hostname":"Ches-MacBook-Pro.local","msg":"Processing https://github.com/dosco/minds"}
+{"level":30,"time":1680318833266,"pid":20611,"hostname":"Ches-MacBook-Pro.local","msg":"Processing https://www.futurepedia.io/tool/ingestai"}
+{"level":30,"time":1680318833267,"pid":20611,"hostname":"Ches-MacBook-Pro.local","msg":"Processing https://gut-cli.dev/"}
+{"level":30,"time":1680318833388,"pid":20611,"hostname":"Ches-MacBook-Pro.local","msg":"Fetched "}
+{"level":30,"time":1680318833389,"pid":20611,"hostname":"Ches-MacBook-Pro.local","msg":"Processing https://waitbutwhy.com/2014/05/fermi-paradox.html"}
+{"level":30,"time":1680318833390,"pid":20611,"hostname":"Ches-MacBook-Pro.local","msg":"Processing http://kadekillary.work/"}
+{"level":30,"time":1680318833390,"pid":20611,"hostname":"Ches-MacBook-Pro.local","msg":"Processing https://mitadmissions.org/blogs/entry/how-to-draw-dotted-lines-on-chalkboards-mit-style/"}
+{"level":30,"time":1680318833391,"pid":20611,"hostname":"Ches-MacBook-Pro.local","msg":"Processing https://github.com/twitter/the-algorithm"}
+{"level":30,"time":1680318833392,"pid":20611,"hostname":"Ches-MacBook-Pro.local","msg":"Processing https://github.com/rosefromthedead/effing-mad"}
+{"level":30,"time":1680318833392,"pid":20611,"hostname":"Ches-MacBook-Pro.local","msg":"Processing https://www.fixie.ai/"}
+{"level":30,"time":1680318833392,"pid":20611,"hostname":"Ches-MacBook-Pro.local","msg":"Processing https://github.com/HigherOrderCO/HVM"}
+{"level":30,"time":1680318833393,"pid":20611,"hostname":"Ches-MacBook-Pro.local","msg":"Processing https://github.com/dosco/minds"}
+{"level":30,"time":1680318833393,"pid":20611,"hostname":"Ches-MacBook-Pro.local","msg":"Processing https://www.futurepedia.io/tool/ingestai"}
+{"level":30,"time":1680318833394,"pid":20611,"hostname":"Ches-MacBook-Pro.local","msg":"Processing https://gut-cli.dev/"}
+{"level":30,"time":1680318833999,"pid":20611,"hostname":"Ches-MacBook-Pro.local","msg":"Indexed https://www.futurepedia.io/tool/ingestai"}
+{"level":30,"time":1680318833999,"pid":20611,"hostname":"Ches-MacBook-Pro.local","msg":"Processing https://shashankrajput.github.io/Generative.pdf"}
+{"level":30,"time":1680318834013,"pid":20611,"hostname":"Ches-MacBook-Pro.local","msg":"Indexed https://www.futurepedia.io/tool/ingestai"}
+{"level":30,"time":1680318834013,"pid":20611,"hostname":"Ches-MacBook-Pro.local","msg":"Processing https://shashankrajput.github.io/Generative.pdf"}
+{"level":30,"time":1680318834014,"pid":20611,"hostname":"Ches-MacBook-Pro.local","msg":"Indexed https://gut-cli.dev/"}
+{"level":30,"time":1680318834014,"pid":20611,"hostname":"Ches-MacBook-Pro.local","msg":"Processing https://github.com/Picsart-AI-Research/Text2Video-Zero"}
+{"level":30,"time":1680318834016,"pid":20611,"hostname":"Ches-MacBook-Pro.local","msg":"Indexed https://gut-cli.dev/"}
+{"level":30,"time":1680318834016,"pid":20611,"hostname":"Ches-MacBook-Pro.local","msg":"Processing https://github.com/Picsart-AI-Research/Text2Video-Zero"}
+{"level":30,"time":1680318834547,"pid":20611,"hostname":"Ches-MacBook-Pro.local","msg":"Indexed https://github.com/twitter/the-algorithm"}
+{"level":30,"time":1680318834547,"pid":20611,"hostname":"Ches-MacBook-Pro.local","msg":"Processing https://fly.io/ruby-dispatch/pairing-with-gpt-4/"}
+{"level":30,"time":1680318834889,"pid":20611,"hostname":"Ches-MacBook-Pro.local","msg":"Indexed https://www.fixie.ai/"}
+{"level":30,"time":1680318834889,"pid":20611,"hostname":"Ches-MacBook-Pro.local","msg":"Processing https://fly.io/ruby-dispatch/pairing-with-gpt-4/"}
+{"level":30,"time":1680318834951,"pid":20611,"hostname":"Ches-MacBook-Pro.local","msg":"Indexed https://www.fixie.ai/"}
+{"level":30,"time":1680318834951,"pid":20611,"hostname":"Ches-MacBook-Pro.local","msg":"Processing https://simonwillison.net/2023/Mar/24/datasette-chatgpt-plugin/"}
+{"level":30,"time":1680318835376,"pid":20611,"hostname":"Ches-MacBook-Pro.local","msg":"Indexed https://mitadmissions.org/blogs/entry/how-to-draw-dotted-lines-on-chalkboards-mit-style/"}
+{"level":30,"time":1680318835376,"pid":20611,"hostname":"Ches-MacBook-Pro.local","msg":"Processing https://simonwillison.net/2023/Mar/24/datasette-chatgpt-plugin/"}
+{"level":50,"time":1680318835377,"pid":20611,"hostname":"Ches-MacBook-Pro.local","msg":"Failed to enrich https://shashankrajput.github.io/Generative.pdf 'Unable to parse non text format application/pdf for now'"}
+{"level":50,"time":1680318835378,"pid":20611,"hostname":"Ches-MacBook-Pro.local","msg":"Failed to enrich https://shashankrajput.github.io/Generative.pdf 'Unable to parse non text format application/pdf for now'"}
+{"level":30,"time":1680318835595,"pid":20611,"hostname":"Ches-MacBook-Pro.local","msg":"Indexed https://mitadmissions.org/blogs/entry/how-to-draw-dotted-lines-on-chalkboards-mit-style/"}
+{"level":30,"time":1680318835595,"pid":20611,"hostname":"Ches-MacBook-Pro.local","msg":"Processing https://johanwind.github.io/2023/03/23/rwkv_overview.html"}
+{"level":30,"time":1680318835596,"pid":20611,"hostname":"Ches-MacBook-Pro.local","msg":"Indexed https://github.com/rosefromthedead/effing-mad"}
+{"level":30,"time":1680318835596,"pid":20611,"hostname":"Ches-MacBook-Pro.local","msg":"Processing https://johanwind.github.io/2023/03/23/rwkv_overview.html"}
+{"level":30,"time":1680318835597,"pid":20611,"hostname":"Ches-MacBook-Pro.local","msg":"Indexed https://github.com/twitter/the-algorithm"}
+{"level":30,"time":1680318835597,"pid":20611,"hostname":"Ches-MacBook-Pro.local","msg":"Processing https://oneusefulthing.substack.com/p/superhuman-what-can-ai-do-in-30-minutes"}
+{"level":30,"time":1680318836294,"pid":20611,"hostname":"Ches-MacBook-Pro.local","msg":"Indexed https://shashankrajput.github.io/Generative.pdf"}
+{"level":30,"time":1680318836294,"pid":20611,"hostname":"Ches-MacBook-Pro.local","msg":"Processing https://oneusefulthing.substack.com/p/superhuman-what-can-ai-do-in-30-minutes"}
+{"level":30,"time":1680318836294,"pid":20611,"hostname":"Ches-MacBook-Pro.local","msg":"Indexed https://github.com/rosefromthedead/effing-mad"}
+{"level":30,"time":1680318836294,"pid":20611,"hostname":"Ches-MacBook-Pro.local","msg":"Processing https://johanwind.github.io/2023/03/23/rwkv_details.html"}
+{"level":30,"time":1680318836295,"pid":20611,"hostname":"Ches-MacBook-Pro.local","msg":"Indexed https://shashankrajput.github.io/Generative.pdf"}
+{"level":30,"time":1680318836295,"pid":20611,"hostname":"Ches-MacBook-Pro.local","msg":"Processing https://johanwind.github.io/2023/03/23/rwkv_details.html"}
+{"level":30,"time":1680318836298,"pid":20611,"hostname":"Ches-MacBook-Pro.local","msg":"Indexed https://github.com/dosco/minds"}
+{"level":30,"time":1680318836298,"pid":20611,"hostname":"Ches-MacBook-Pro.local","msg":"Processing https://blog.lastmileai.dev/using-openais-retrieval-plugin-with-llama-d2e0b6732f14"}
+{"level":30,"time":1680318836336,"pid":20611,"hostname":"Ches-MacBook-Pro.local","msg":"Indexed https://github.com/dosco/minds"}
+{"level":30,"time":1680318836336,"pid":20611,"hostname":"Ches-MacBook-Pro.local","msg":"Processing https://blog.lastmileai.dev/using-openais-retrieval-plugin-with-llama-d2e0b6732f14"}
+{"level":30,"time":1680318836337,"pid":20611,"hostname":"Ches-MacBook-Pro.local","msg":"Indexed https://github.com/HigherOrderCO/HVM"}
+{"level":30,"time":1680318836337,"pid":20611,"hostname":"Ches-MacBook-Pro.local","msg":"Processing https://github.com/transitive-bullshit/chatgpt-well-known-plugin-finder"}
+{"level":30,"time":1680318836433,"pid":20611,"hostname":"Ches-MacBook-Pro.local","msg":"Indexed https://github.com/HigherOrderCO/HVM"}
+{"level":30,"time":1680318836433,"pid":20611,"hostname":"Ches-MacBook-Pro.local","msg":"Processing https://github.com/transitive-bullshit/chatgpt-well-known-plugin-finder"}
+{"level":30,"time":1680318836434,"pid":20611,"hostname":"Ches-MacBook-Pro.local","msg":"Indexed https://simonwillison.net/2023/Mar/24/datasette-chatgpt-plugin/"}
+{"level":30,"time":1680318836434,"pid":20611,"hostname":"Ches-MacBook-Pro.local","msg":"Processing https://arxiv.org/abs/2303.14177"}
+{"level":30,"time":1680318836634,"pid":20611,"hostname":"Ches-MacBook-Pro.local","msg":"Indexed https://waitbutwhy.com/2014/05/fermi-paradox.html"}
+{"level":30,"time":1680318836635,"pid":20611,"hostname":"Ches-MacBook-Pro.local","msg":"Processing https://simonwillison.net/2023/Mar/27/ai-enhanced-development/"}
+{"level":30,"time":1680318836635,"pid":20611,"hostname":"Ches-MacBook-Pro.local","msg":"Indexed https://waitbutwhy.com/2014/05/fermi-paradox.html"}
+{"level":30,"time":1680318836635,"pid":20611,"hostname":"Ches-MacBook-Pro.local","msg":"Processing https://arxiv.org/abs/2303.14177"}
+{"level":30,"time":1680318836788,"pid":20611,"hostname":"Ches-MacBook-Pro.local","msg":"Indexed https://fly.io/ruby-dispatch/pairing-with-gpt-4/"}
+{"level":30,"time":1680318836788,"pid":20611,"hostname":"Ches-MacBook-Pro.local","msg":"Processing https://news.ycombinator.com/item?id=35336113"}
+{"level":30,"time":1680318836789,"pid":20611,"hostname":"Ches-MacBook-Pro.local","msg":"Indexed https://fly.io/ruby-dispatch/pairing-with-gpt-4/"}
+{"level":30,"time":1680318836789,"pid":20611,"hostname":"Ches-MacBook-Pro.local","msg":"Processing https://simonwillison.net/2023/Mar/27/ai-enhanced-development/"}
+{"level":30,"time":1680318836869,"pid":20611,"hostname":"Ches-MacBook-Pro.local","msg":"Indexed http://kadekillary.work/"}
+{"level":30,"time":1680318836869,"pid":20611,"hostname":"Ches-MacBook-Pro.local","msg":"Processing https://news.ycombinator.com/item?id=35336113"}
+{"level":30,"time":1680318836870,"pid":20611,"hostname":"Ches-MacBook-Pro.local","msg":"Indexed https://simonwillison.net/2023/Mar/24/datasette-chatgpt-plugin/"}
+{"level":30,"time":1680318836870,"pid":20611,"hostname":"Ches-MacBook-Pro.local","msg":"Processing https://neon.tech/blog/quicker-serverless-postgres"}
+{"level":30,"time":1680318836898,"pid":20611,"hostname":"Ches-MacBook-Pro.local","msg":"Indexed https://simonwillison.net/2023/Mar/27/ai-enhanced-development/"}
+{"level":30,"time":1680318836898,"pid":20611,"hostname":"Ches-MacBook-Pro.local","msg":"Processing https://neon.tech/blog/quicker-serverless-postgres"}
+{"level":30,"time":1680318837050,"pid":20611,"hostname":"Ches-MacBook-Pro.local","msg":"Indexed https://simonwillison.net/2023/Mar/27/ai-enhanced-development/"}
+{"level":30,"time":1680318837050,"pid":20611,"hostname":"Ches-MacBook-Pro.local","msg":"Processing https://www.cerebras.net/blog/cerebras-gpt-a-family-of-open-compute-efficient-large-language-models/"}
+{"level":30,"time":1680318837176,"pid":20611,"hostname":"Ches-MacBook-Pro.local","msg":"Indexed https://johanwind.github.io/2023/03/23/rwkv_overview.html"}
+{"level":30,"time":1680318837176,"pid":20611,"hostname":"Ches-MacBook-Pro.local","msg":"Processing https://www.cerebras.net/blog/cerebras-gpt-a-family-of-open-compute-efficient-large-language-models/"}
+{"level":30,"time":1680318837178,"pid":20611,"hostname":"Ches-MacBook-Pro.local","msg":"Indexed https://johanwind.github.io/2023/03/23/rwkv_overview.html"}
+{"level":30,"time":1680318837178,"pid":20611,"hostname":"Ches-MacBook-Pro.local","msg":"Processing https://github.com/TaxyAI/browser-extension"}
+{"level":30,"time":1680318837484,"pid":20611,"hostname":"Ches-MacBook-Pro.local","msg":"Indexed https://neon.tech/blog/quicker-serverless-postgres"}
+{"level":30,"time":1680318837484,"pid":20611,"hostname":"Ches-MacBook-Pro.local","msg":"Processing https://github.com/nomic-ai/gpt4all"}
+{"level":30,"time":1680318837485,"pid":20611,"hostname":"Ches-MacBook-Pro.local","msg":"Indexed https://neon.tech/blog/quicker-serverless-postgres"}
+{"level":30,"time":1680318837485,"pid":20611,"hostname":"Ches-MacBook-Pro.local","msg":"Processing https://github.com/TaxyAI/browser-extension"}
+{"level":30,"time":1680318838143,"pid":20611,"hostname":"Ches-MacBook-Pro.local","msg":"Indexed http://kadekillary.work/"}
+{"level":30,"time":1680318838143,"pid":20611,"hostname":"Ches-MacBook-Pro.local","msg":"Processing https://github.com/nomic-ai/gpt4all"}
+{"level":30,"time":1680318838292,"pid":20611,"hostname":"Ches-MacBook-Pro.local","msg":"Indexed https://johanwind.github.io/2023/03/23/rwkv_details.html"}
+{"level":30,"time":1680318838292,"pid":20611,"hostname":"Ches-MacBook-Pro.local","msg":"Processing https://www.latent.space/p/shreya-shankar"}
+{"level":30,"time":1680318838324,"pid":20611,"hostname":"Ches-MacBook-Pro.local","msg":"Indexed https://github.com/TaxyAI/browser-extension"}
+{"level":30,"time":1680318838324,"pid":20611,"hostname":"Ches-MacBook-Pro.local","msg":"Processing https://www.latent.space/p/shreya-shankar"}
+{"level":30,"time":1680318838325,"pid":20611,"hostname":"Ches-MacBook-Pro.local","msg":"Indexed https://github.com/TaxyAI/browser-extension"}
+{"level":30,"time":1680318838325,"pid":20611,"hostname":"Ches-MacBook-Pro.local","msg":"Processing https://mp.weixin.qq.com/s/HVx-nUyJMBLElShJkQ5BeA"}
+{"level":30,"time":1680318838674,"pid":20611,"hostname":"Ches-MacBook-Pro.local","msg":"Indexed https://johanwind.github.io/2023/03/23/rwkv_details.html"}
+{"level":30,"time":1680318838674,"pid":20611,"hostname":"Ches-MacBook-Pro.local","msg":"Processing https://mp.weixin.qq.com/s/HVx-nUyJMBLElShJkQ5BeA"}
+{"level":30,"time":1680318838676,"pid":20611,"hostname":"Ches-MacBook-Pro.local","msg":"Indexed https://arxiv.org/abs/2303.14177"}
+{"level":30,"time":1680318838676,"pid":20611,"hostname":"Ches-MacBook-Pro.local","msg":"Processing https://twitter.com/colinfortuner/status/1640791238063575040?s=12&t=uggwIEE53eDHUHusFHP9vA"}
+{"level":30,"time":1680318839001,"pid":20611,"hostname":"Ches-MacBook-Pro.local","msg":"Indexed https://arxiv.org/abs/2303.14177"}
+{"level":30,"time":1680318839001,"pid":20611,"hostname":"Ches-MacBook-Pro.local","msg":"Processing https://twitter.com/colinfortuner/status/1640791238063575040?s=12&t=uggwIEE53eDHUHusFHP9vA"}
+{"level":30,"time":1680318839065,"pid":20611,"hostname":"Ches-MacBook-Pro.local","msg":"Indexed https://github.com/nomic-ai/gpt4all"}
+{"level":30,"time":1680318839065,"pid":20611,"hostname":"Ches-MacBook-Pro.local","msg":"Processing https://arxiv.org/abs/2303.15714"}
+{"level":30,"time":1680318839079,"pid":20611,"hostname":"Ches-MacBook-Pro.local","msg":"Indexed https://www.cerebras.net/blog/cerebras-gpt-a-family-of-open-compute-efficient-large-language-models/"}
+{"level":30,"time":1680318839079,"pid":20611,"hostname":"Ches-MacBook-Pro.local","msg":"Processing https://arxiv.org/abs/2303.15714"}
+{"level":30,"time":1680318839080,"pid":20611,"hostname":"Ches-MacBook-Pro.local","msg":"Indexed https://mp.weixin.qq.com/s/HVx-nUyJMBLElShJkQ5BeA"}
+{"level":30,"time":1680318839080,"pid":20611,"hostname":"Ches-MacBook-Pro.local","msg":"Processing https://arxiv.org/abs/2303.16199"}
+{"level":30,"time":1680318839363,"pid":20611,"hostname":"Ches-MacBook-Pro.local","msg":"Indexed https://mp.weixin.qq.com/s/HVx-nUyJMBLElShJkQ5BeA"}
+{"level":30,"time":1680318839363,"pid":20611,"hostname":"Ches-MacBook-Pro.local","msg":"Processing https://arxiv.org/abs/2303.16199"}
+{"level":30,"time":1680318839442,"pid":20611,"hostname":"Ches-MacBook-Pro.local","msg":"Indexed https://arxiv.org/abs/2303.15714"}
+{"level":30,"time":1680318839442,"pid":20611,"hostname":"Ches-MacBook-Pro.local","msg":"Processing https://zhuanlan.zhihu.com/p/370385806?utm_medium=social&utm_oi=53248929038336&utm_psn=1624376761759752193&utm_source=wechat_timeline&utm_id=0"}
+{"level":30,"time":1680318839795,"pid":20611,"hostname":"Ches-MacBook-Pro.local","msg":"Indexed https://www.cerebras.net/blog/cerebras-gpt-a-family-of-open-compute-efficient-large-language-models/"}
+{"level":30,"time":1680318839795,"pid":20611,"hostname":"Ches-MacBook-Pro.local","msg":"Processing https://zhuanlan.zhihu.com/p/370385806?utm_medium=social&utm_oi=53248929038336&utm_psn=1624376761759752193&utm_source=wechat_timeline&utm_id=0"}
+{"level":30,"time":1680318839795,"pid":20611,"hostname":"Ches-MacBook-Pro.local","msg":"Indexed https://www.latent.space/p/shreya-shankar"}
+{"level":30,"time":1680318839879,"pid":20611,"hostname":"Ches-MacBook-Pro.local","msg":"Indexed https://arxiv.org/abs/2303.15714"}
+{"level":30,"time":1680318839904,"pid":20611,"hostname":"Ches-MacBook-Pro.local","msg":"Indexed https://zhuanlan.zhihu.com/p/370385806?utm_medium=social&utm_oi=53248929038336&utm_psn=1624376761759752193&utm_source=wechat_timeline&utm_id=0"}
+{"level":30,"time":1680318839925,"pid":20611,"hostname":"Ches-MacBook-Pro.local","msg":"Indexed https://www.latent.space/p/shreya-shankar"}
+{"level":30,"time":1680318840052,"pid":20611,"hostname":"Ches-MacBook-Pro.local","msg":"Indexed https://zhuanlan.zhihu.com/p/370385806?utm_medium=social&utm_oi=53248929038336&utm_psn=1624376761759752193&utm_source=wechat_timeline&utm_id=0"}
+{"level":30,"time":1680318840147,"pid":20611,"hostname":"Ches-MacBook-Pro.local","msg":"Indexed https://arxiv.org/abs/2303.16199"}
+{"level":30,"time":1680318840518,"pid":20611,"hostname":"Ches-MacBook-Pro.local","msg":"Indexed https://arxiv.org/abs/2303.16199"}
+{"level":30,"time":1680318859240,"pid":21050,"hostname":"Ches-MacBook-Pro.local","msg":"Received sync pocket request"}
+{"level":30,"time":1680318859312,"pid":21050,"hostname":"Ches-MacBook-Pro.local","msg":"Skipped refreshing"}
+{"level":30,"time":1680318860505,"pid":21050,"hostname":"Ches-MacBook-Pro.local","msg":"Received sync pocket request"}
+{"level":30,"time":1680318860509,"pid":21050,"hostname":"Ches-MacBook-Pro.local","msg":"Skipped refreshing"}
+{"level":30,"time":1680318906253,"pid":21050,"hostname":"Ches-MacBook-Pro.local","msg":"Received sync pocket request"}
+{"level":30,"time":1680318906715,"pid":21050,"hostname":"Ches-MacBook-Pro.local","msg":"Received sync pocket request"}
+{"level":30,"time":1680318907497,"pid":21050,"hostname":"Ches-MacBook-Pro.local","msg":"Fetched "}
+{"level":30,"time":1680318907498,"pid":21050,"hostname":"Ches-MacBook-Pro.local","msg":"Processing https://waitbutwhy.com/2014/05/fermi-paradox.html"}
+{"level":30,"time":1680318907499,"pid":21050,"hostname":"Ches-MacBook-Pro.local","msg":"Processing http://kadekillary.work/"}
+{"level":30,"time":1680318907500,"pid":21050,"hostname":"Ches-MacBook-Pro.local","msg":"Processing https://mitadmissions.org/blogs/entry/how-to-draw-dotted-lines-on-chalkboards-mit-style/"}
+{"level":30,"time":1680318907501,"pid":21050,"hostname":"Ches-MacBook-Pro.local","msg":"Processing https://github.com/twitter/the-algorithm"}
+{"level":30,"time":1680318907501,"pid":21050,"hostname":"Ches-MacBook-Pro.local","msg":"Processing https://github.com/rosefromthedead/effing-mad"}
+{"level":30,"time":1680318907502,"pid":21050,"hostname":"Ches-MacBook-Pro.local","msg":"Processing https://www.fixie.ai/"}
+{"level":30,"time":1680318907502,"pid":21050,"hostname":"Ches-MacBook-Pro.local","msg":"Processing https://github.com/HigherOrderCO/HVM"}
+{"level":30,"time":1680318907503,"pid":21050,"hostname":"Ches-MacBook-Pro.local","msg":"Processing https://github.com/dosco/minds"}
+{"level":30,"time":1680318907504,"pid":21050,"hostname":"Ches-MacBook-Pro.local","msg":"Processing https://www.futurepedia.io/tool/ingestai"}
+{"level":30,"time":1680318907505,"pid":21050,"hostname":"Ches-MacBook-Pro.local","msg":"Processing https://gut-cli.dev/"}
+{"level":30,"time":1680318907588,"pid":21050,"hostname":"Ches-MacBook-Pro.local","msg":"Fetched "}
+{"level":30,"time":1680318907588,"pid":21050,"hostname":"Ches-MacBook-Pro.local","msg":"Processing https://github.com/twitter/the-algorithm"}
+{"level":30,"time":1680318907589,"pid":21050,"hostname":"Ches-MacBook-Pro.local","msg":"Processing https://www.fixie.ai/"}
+{"level":30,"time":1680318907590,"pid":21050,"hostname":"Ches-MacBook-Pro.local","msg":"Processing https://github.com/dosco/minds"}
+{"level":30,"time":1680318907590,"pid":21050,"hostname":"Ches-MacBook-Pro.local","msg":"Processing https://fly.io/ruby-dispatch/pairing-with-gpt-4/"}
+{"level":30,"time":1680318907591,"pid":21050,"hostname":"Ches-MacBook-Pro.local","msg":"Processing https://simonwillison.net/2023/Mar/27/ai-enhanced-development/"}
+{"level":30,"time":1680318907591,"pid":21050,"hostname":"Ches-MacBook-Pro.local","msg":"Processing https://hardpivot.substack.com/p/open-sourcing-my-y-combinator-winter"}
+{"level":30,"time":1680318907592,"pid":21050,"hostname":"Ches-MacBook-Pro.local","msg":"Processing https://vicuna.lmsys.org/"}
+{"level":30,"time":1680318907592,"pid":21050,"hostname":"Ches-MacBook-Pro.local","msg":"Processing https://news.ycombinator.com/item?id=35384462"}
+{"level":30,"time":1680318907593,"pid":21050,"hostname":"Ches-MacBook-Pro.local","msg":"Processing https://mp.weixin.qq.com/s/AxX-Q7njegNTAxMkYFwsfA"}
+{"level":30,"time":1680318907593,"pid":21050,"hostname":"Ches-MacBook-Pro.local","msg":"Processing https://www.newcomer.co/p/what-we-learned-at-the-cerebral-valley"}
+{"level":30,"time":1680318908258,"pid":21050,"hostname":"Ches-MacBook-Pro.local","msg":"Indexed https://gut-cli.dev/"}
+{"level":30,"time":1680318908258,"pid":21050,"hostname":"Ches-MacBook-Pro.local","msg":"Processing https://shashankrajput.github.io/Generative.pdf"}
+{"level":30,"time":1680318908259,"pid":21050,"hostname":"Ches-MacBook-Pro.local","msg":"Indexed https://www.futurepedia.io/tool/ingestai"}
+{"level":30,"time":1680318908259,"pid":21050,"hostname":"Ches-MacBook-Pro.local","msg":"Processing https://github.com/Picsart-AI-Research/Text2Video-Zero"}
+{"level":30,"time":1680318908340,"pid":21050,"hostname":"Ches-MacBook-Pro.local","msg":"Indexed https://vicuna.lmsys.org/"}
+{"level":30,"time":1680318908341,"pid":21050,"hostname":"Ches-MacBook-Pro.local","msg":"Indexed https://mp.weixin.qq.com/s/AxX-Q7njegNTAxMkYFwsfA"}
+{"level":30,"time":1680318908355,"pid":21050,"hostname":"Ches-MacBook-Pro.local","msg":"Indexed https://simonwillison.net/2023/Mar/27/ai-enhanced-development/"}
+{"level":30,"time":1680318908789,"pid":21050,"hostname":"Ches-MacBook-Pro.local","msg":"Indexed https://www.fixie.ai/"}
+{"level":30,"time":1680318908789,"pid":21050,"hostname":"Ches-MacBook-Pro.local","msg":"Processing https://fly.io/ruby-dispatch/pairing-with-gpt-4/"}
+{"level":30,"time":1680318909271,"pid":21050,"hostname":"Ches-MacBook-Pro.local","msg":"Indexed https://mitadmissions.org/blogs/entry/how-to-draw-dotted-lines-on-chalkboards-mit-style/"}
+{"level":30,"time":1680318909271,"pid":21050,"hostname":"Ches-MacBook-Pro.local","msg":"Processing https://simonwillison.net/2023/Mar/24/datasette-chatgpt-plugin/"}
+{"level":30,"time":1680318909272,"pid":21050,"hostname":"Ches-MacBook-Pro.local","msg":"Indexed https://www.fixie.ai/"}
+{"level":50,"time":1680318909273,"pid":21050,"hostname":"Ches-MacBook-Pro.local","msg":"Failed to enrich https://shashankrajput.github.io/Generative.pdf 'Unable to parse non text format application/pdf for now'"}
+{"level":30,"time":1680318909404,"pid":21050,"hostname":"Ches-MacBook-Pro.local","msg":"Indexed https://shashankrajput.github.io/Generative.pdf"}
+{"level":30,"time":1680318909404,"pid":21050,"hostname":"Ches-MacBook-Pro.local","msg":"Processing https://johanwind.github.io/2023/03/23/rwkv_overview.html"}
+{"level":30,"time":1680318909407,"pid":21050,"hostname":"Ches-MacBook-Pro.local","msg":"Indexed https://fly.io/ruby-dispatch/pairing-with-gpt-4/"}
+{"level":30,"time":1680318909408,"pid":21050,"hostname":"Ches-MacBook-Pro.local","msg":"Indexed http://kadekillary.work/"}
+{"level":30,"time":1680318909408,"pid":21050,"hostname":"Ches-MacBook-Pro.local","msg":"Processing https://oneusefulthing.substack.com/p/superhuman-what-can-ai-do-in-30-minutes"}
+{"level":30,"time":1680318909411,"pid":21050,"hostname":"Ches-MacBook-Pro.local","msg":"Indexed https://fly.io/ruby-dispatch/pairing-with-gpt-4/"}
+{"level":30,"time":1680318909411,"pid":21050,"hostname":"Ches-MacBook-Pro.local","msg":"Processing https://johanwind.github.io/2023/03/23/rwkv_details.html"}
+{"level":30,"time":1680318909542,"pid":21050,"hostname":"Ches-MacBook-Pro.local","msg":"Indexed https://waitbutwhy.com/2014/05/fermi-paradox.html"}
+{"level":30,"time":1680318909542,"pid":21050,"hostname":"Ches-MacBook-Pro.local","msg":"Processing https://blog.lastmileai.dev/using-openais-retrieval-plugin-with-llama-d2e0b6732f14"}
+{"level":30,"time":1680318909858,"pid":21050,"hostname":"Ches-MacBook-Pro.local","msg":"Indexed https://simonwillison.net/2023/Mar/24/datasette-chatgpt-plugin/"}
+{"level":30,"time":1680318909858,"pid":21050,"hostname":"Ches-MacBook-Pro.local","msg":"Processing https://github.com/transitive-bullshit/chatgpt-well-known-plugin-finder"}
+{"level":30,"time":1680318909979,"pid":21050,"hostname":"Ches-MacBook-Pro.local","msg":"Indexed https://www.newcomer.co/p/what-we-learned-at-the-cerebral-valley"}
+{"level":30,"time":1680318910239,"pid":21050,"hostname":"Ches-MacBook-Pro.local","msg":"Indexed https://johanwind.github.io/2023/03/23/rwkv_details.html"}
+{"level":30,"time":1680318910239,"pid":21050,"hostname":"Ches-MacBook-Pro.local","msg":"Processing https://arxiv.org/abs/2303.14177"}
+{"level":30,"time":1680318910813,"pid":21050,"hostname":"Ches-MacBook-Pro.local","msg":"Indexed https://johanwind.github.io/2023/03/23/rwkv_overview.html"}
+{"level":30,"time":1680318910813,"pid":21050,"hostname":"Ches-MacBook-Pro.local","msg":"Processing https://simonwillison.net/2023/Mar/27/ai-enhanced-development/"}
+{"level":30,"time":1680318911144,"pid":21050,"hostname":"Ches-MacBook-Pro.local","msg":"Indexed https://simonwillison.net/2023/Mar/27/ai-enhanced-development/"}
+{"level":30,"time":1680318911144,"pid":21050,"hostname":"Ches-MacBook-Pro.local","msg":"Processing https://news.ycombinator.com/item?id=35336113"}
+{"level":30,"time":1680318911426,"pid":21050,"hostname":"Ches-MacBook-Pro.local","msg":"Indexed https://arxiv.org/abs/2303.14177"}
+{"level":30,"time":1680318911426,"pid":21050,"hostname":"Ches-MacBook-Pro.local","msg":"Processing https://neon.tech/blog/quicker-serverless-postgres"}
+{"level":30,"time":1680318912128,"pid":21050,"hostname":"Ches-MacBook-Pro.local","msg":"Indexed https://neon.tech/blog/quicker-serverless-postgres"}
+{"level":30,"time":1680318912128,"pid":21050,"hostname":"Ches-MacBook-Pro.local","msg":"Processing https://www.cerebras.net/blog/cerebras-gpt-a-family-of-open-compute-efficient-large-language-models/"}
+{"level":30,"time":1680318913758,"pid":21050,"hostname":"Ches-MacBook-Pro.local","msg":"Indexed https://www.cerebras.net/blog/cerebras-gpt-a-family-of-open-compute-efficient-large-language-models/"}
+{"level":30,"time":1680318913758,"pid":21050,"hostname":"Ches-MacBook-Pro.local","msg":"Processing https://github.com/TaxyAI/browser-extension"}
+{"level":50,"time":1680318917502,"pid":21050,"hostname":"Ches-MacBook-Pro.local","msg":"Failed to enrich https://github.com/twitter/the-algorithm {\"cause\":{\"name\":\"ConnectTimeoutError\",\"code\":\"UND_ERR_CONNECT_TIMEOUT\",\"message\":\"Connect Timeout Error\"}}"}
+{"level":30,"time":1680318917531,"pid":21050,"hostname":"Ches-MacBook-Pro.local","msg":"Indexed https://github.com/twitter/the-algorithm"}
+{"level":30,"time":1680318917531,"pid":21050,"hostname":"Ches-MacBook-Pro.local","msg":"Processing https://github.com/nomic-ai/gpt4all"}
+{"level":50,"time":1680318917589,"pid":21050,"hostname":"Ches-MacBook-Pro.local","msg":"Failed to enrich https://github.com/twitter/the-algorithm {\"cause\":{\"name\":\"ConnectTimeoutError\",\"code\":\"UND_ERR_CONNECT_TIMEOUT\",\"message\":\"Connect Timeout Error\"}}"}
+{"level":50,"time":1680318917590,"pid":21050,"hostname":"Ches-MacBook-Pro.local","msg":"Failed to enrich https://github.com/dosco/minds {\"cause\":{\"name\":\"ConnectTimeoutError\",\"code\":\"UND_ERR_CONNECT_TIMEOUT\",\"message\":\"Connect Timeout Error\"}}"}
+{"level":50,"time":1680318917592,"pid":21050,"hostname":"Ches-MacBook-Pro.local","msg":"Failed to enrich https://hardpivot.substack.com/p/open-sourcing-my-y-combinator-winter {\"cause\":{\"name\":\"ConnectTimeoutError\",\"code\":\"UND_ERR_CONNECT_TIMEOUT\",\"message\":\"Connect Timeout Error\"}}"}
+{"level":50,"time":1680318917592,"pid":21050,"hostname":"Ches-MacBook-Pro.local","msg":"Failed to enrich https://news.ycombinator.com/item?id=35384462 {\"cause\":{\"name\":\"ConnectTimeoutError\",\"code\":\"UND_ERR_CONNECT_TIMEOUT\",\"message\":\"Connect Timeout Error\"}}"}
+{"level":30,"time":1680318917619,"pid":21050,"hostname":"Ches-MacBook-Pro.local","msg":"Indexed https://github.com/twitter/the-algorithm"}
+{"level":30,"time":1680318917622,"pid":21050,"hostname":"Ches-MacBook-Pro.local","msg":"Indexed https://github.com/dosco/minds"}
+{"level":30,"time":1680318917655,"pid":21050,"hostname":"Ches-MacBook-Pro.local","msg":"Indexed https://news.ycombinator.com/item?id=35384462"}
+{"level":30,"time":1680318917656,"pid":21050,"hostname":"Ches-MacBook-Pro.local","msg":"Indexed https://hardpivot.substack.com/p/open-sourcing-my-y-combinator-winter"}
+{"level":50,"time":1680318918261,"pid":21050,"hostname":"Ches-MacBook-Pro.local","msg":"Failed to enrich https://github.com/Picsart-AI-Research/Text2Video-Zero {\"cause\":{\"name\":\"ConnectTimeoutError\",\"code\":\"UND_ERR_CONNECT_TIMEOUT\",\"message\":\"Connect Timeout Error\"}}"}
+{"level":30,"time":1680318918296,"pid":21050,"hostname":"Ches-MacBook-Pro.local","msg":"Indexed https://github.com/Picsart-AI-Research/Text2Video-Zero"}
+{"level":30,"time":1680318918296,"pid":21050,"hostname":"Ches-MacBook-Pro.local","msg":"Processing https://www.latent.space/p/shreya-shankar"}
+{"level":50,"time":1680318919453,"pid":21050,"hostname":"Ches-MacBook-Pro.local","msg":"Failed to enrich https://oneusefulthing.substack.com/p/superhuman-what-can-ai-do-in-30-minutes {\"cause\":{\"name\":\"ConnectTimeoutError\",\"code\":\"UND_ERR_CONNECT_TIMEOUT\",\"message\":\"Connect Timeout Error\"}}"}
+{"level":30,"time":1680318919489,"pid":21050,"hostname":"Ches-MacBook-Pro.local","msg":"Indexed https://oneusefulthing.substack.com/p/superhuman-what-can-ai-do-in-30-minutes"}
+{"level":30,"time":1680318919489,"pid":21050,"hostname":"Ches-MacBook-Pro.local","msg":"Processing https://mp.weixin.qq.com/s/HVx-nUyJMBLElShJkQ5BeA"}
+{"level":30,"time":1680318919494,"pid":21050,"hostname":"Ches-MacBook-Pro.local","msg":"Indexed https://www.latent.space/p/shreya-shankar"}
+{"level":30,"time":1680318919494,"pid":21050,"hostname":"Ches-MacBook-Pro.local","msg":"Processing https://twitter.com/colinfortuner/status/1640791238063575040?s=12&t=uggwIEE53eDHUHusFHP9vA"}
+{"level":50,"time":1680318919860,"pid":21050,"hostname":"Ches-MacBook-Pro.local","msg":"Failed to enrich https://github.com/transitive-bullshit/chatgpt-well-known-plugin-finder {\"cause\":{\"name\":\"ConnectTimeoutError\",\"code\":\"UND_ERR_CONNECT_TIMEOUT\",\"message\":\"Connect Timeout Error\"}}"}
+{"level":30,"time":1680318919880,"pid":21050,"hostname":"Ches-MacBook-Pro.local","msg":"Indexed https://github.com/transitive-bullshit/chatgpt-well-known-plugin-finder"}
+{"level":30,"time":1680318919881,"pid":21050,"hostname":"Ches-MacBook-Pro.local","msg":"Processing https://arxiv.org/abs/2303.15714"}
+{"level":30,"time":1680318920072,"pid":21050,"hostname":"Ches-MacBook-Pro.local","msg":"Indexed https://mp.weixin.qq.com/s/HVx-nUyJMBLElShJkQ5BeA"}
+{"level":30,"time":1680318920072,"pid":21050,"hostname":"Ches-MacBook-Pro.local","msg":"Processing https://arxiv.org/abs/2303.16199"}
+{"level":50,"time":1680318920538,"pid":21050,"hostname":"Ches-MacBook-Pro.local","msg":"Failed to enrich https://blog.lastmileai.dev/using-openais-retrieval-plugin-with-llama-d2e0b6732f14 {\"cause\":{\"name\":\"ConnectTimeoutError\",\"code\":\"UND_ERR_CONNECT_TIMEOUT\",\"message\":\"Connect Timeout Error\"}}"}
+{"level":30,"time":1680318920554,"pid":21050,"hostname":"Ches-MacBook-Pro.local","msg":"Indexed https://blog.lastmileai.dev/using-openais-retrieval-plugin-with-llama-d2e0b6732f14"}
+{"level":30,"time":1680318920554,"pid":21050,"hostname":"Ches-MacBook-Pro.local","msg":"Processing https://zhuanlan.zhihu.com/p/370385806?utm_medium=social&utm_oi=53248929038336&utm_psn=1624376761759752193&utm_source=wechat_timeline&utm_id=0"}
+{"level":30,"time":1680318920914,"pid":21050,"hostname":"Ches-MacBook-Pro.local","msg":"Indexed https://zhuanlan.zhihu.com/p/370385806?utm_medium=social&utm_oi=53248929038336&utm_psn=1624376761759752193&utm_source=wechat_timeline&utm_id=0"}
+{"level":30,"time":1680318921033,"pid":21050,"hostname":"Ches-MacBook-Pro.local","msg":"Indexed https://arxiv.org/abs/2303.15714"}
+{"level":50,"time":1680318921146,"pid":21050,"hostname":"Ches-MacBook-Pro.local","msg":"Failed to enrich https://news.ycombinator.com/item?id=35336113 {\"cause\":{\"name\":\"ConnectTimeoutError\",\"code\":\"UND_ERR_CONNECT_TIMEOUT\",\"message\":\"Connect Timeout Error\"}}"}
+{"level":30,"time":1680318921176,"pid":21050,"hostname":"Ches-MacBook-Pro.local","msg":"Indexed https://news.ycombinator.com/item?id=35336113"}
+{"level":30,"time":1680318921284,"pid":21050,"hostname":"Ches-MacBook-Pro.local","msg":"Indexed https://arxiv.org/abs/2303.16199"}
+{"level":50,"time":1680318923762,"pid":21050,"hostname":"Ches-MacBook-Pro.local","msg":"Failed to enrich https://github.com/TaxyAI/browser-extension {\"cause\":{\"name\":\"ConnectTimeoutError\",\"code\":\"UND_ERR_CONNECT_TIMEOUT\",\"message\":\"Connect Timeout Error\"}}"}
+{"level":30,"time":1680318923808,"pid":21050,"hostname":"Ches-MacBook-Pro.local","msg":"Indexed https://github.com/TaxyAI/browser-extension"}
+{"level":30,"time":1680318934101,"pid":21381,"hostname":"Ches-MacBook-Pro.local","msg":"Received sync pocket request"}
+{"level":30,"time":1680318935154,"pid":21381,"hostname":"Ches-MacBook-Pro.local","msg":"Fetched "}
+{"level":30,"time":1680318935155,"pid":21381,"hostname":"Ches-MacBook-Pro.local","msg":"Processing https://github.com/twitter/the-algorithm"}
+{"level":30,"time":1680318935156,"pid":21381,"hostname":"Ches-MacBook-Pro.local","msg":"Processing https://www.fixie.ai/"}
+{"level":30,"time":1680318935157,"pid":21381,"hostname":"Ches-MacBook-Pro.local","msg":"Processing https://github.com/dosco/minds"}
+{"level":30,"time":1680318935157,"pid":21381,"hostname":"Ches-MacBook-Pro.local","msg":"Processing https://fly.io/ruby-dispatch/pairing-with-gpt-4/"}
+{"level":30,"time":1680318935158,"pid":21381,"hostname":"Ches-MacBook-Pro.local","msg":"Processing https://simonwillison.net/2023/Mar/27/ai-enhanced-development/"}
+{"level":30,"time":1680318935159,"pid":21381,"hostname":"Ches-MacBook-Pro.local","msg":"Processing https://hardpivot.substack.com/p/open-sourcing-my-y-combinator-winter"}
+{"level":30,"time":1680318935160,"pid":21381,"hostname":"Ches-MacBook-Pro.local","msg":"Processing https://vicuna.lmsys.org/"}
+{"level":30,"time":1680318935160,"pid":21381,"hostname":"Ches-MacBook-Pro.local","msg":"Processing https://news.ycombinator.com/item?id=35384462"}
+{"level":30,"time":1680318935161,"pid":21381,"hostname":"Ches-MacBook-Pro.local","msg":"Processing https://mp.weixin.qq.com/s/AxX-Q7njegNTAxMkYFwsfA"}
+{"level":30,"time":1680318935161,"pid":21381,"hostname":"Ches-MacBook-Pro.local","msg":"Processing https://www.newcomer.co/p/what-we-learned-at-the-cerebral-valley"}
+{"level":30,"time":1680318935843,"pid":21381,"hostname":"Ches-MacBook-Pro.local","msg":"Indexed https://mp.weixin.qq.com/s/AxX-Q7njegNTAxMkYFwsfA"}
+{"level":30,"time":1680318936250,"pid":21381,"hostname":"Ches-MacBook-Pro.local","msg":"Indexed https://simonwillison.net/2023/Mar/27/ai-enhanced-development/"}
+{"level":30,"time":1680318936792,"pid":21381,"hostname":"Ches-MacBook-Pro.local","msg":"Indexed https://www.newcomer.co/p/what-we-learned-at-the-cerebral-valley"}
+{"level":30,"time":1680318936814,"pid":21381,"hostname":"Ches-MacBook-Pro.local","msg":"Indexed https://www.fixie.ai/"}
+{"level":30,"time":1680318936820,"pid":21381,"hostname":"Ches-MacBook-Pro.local","msg":"Indexed https://fly.io/ruby-dispatch/pairing-with-gpt-4/"}
+{"level":30,"time":1680318940761,"pid":21381,"hostname":"Ches-MacBook-Pro.local","msg":"Indexed https://vicuna.lmsys.org/"}
+{"level":50,"time":1680318945160,"pid":21381,"hostname":"Ches-MacBook-Pro.local","msg":"Failed to enrich https://github.com/twitter/the-algorithm {\"cause\":{\"name\":\"ConnectTimeoutError\",\"code\":\"UND_ERR_CONNECT_TIMEOUT\",\"message\":\"Connect Timeout Error\"}}"}
+{"level":50,"time":1680318945164,"pid":21381,"hostname":"Ches-MacBook-Pro.local","msg":"Failed to enrich https://github.com/dosco/minds {\"cause\":{\"name\":\"ConnectTimeoutError\",\"code\":\"UND_ERR_CONNECT_TIMEOUT\",\"message\":\"Connect Timeout Error\"}}"}
+{"level":50,"time":1680318945165,"pid":21381,"hostname":"Ches-MacBook-Pro.local","msg":"Failed to enrich https://hardpivot.substack.com/p/open-sourcing-my-y-combinator-winter {\"cause\":{\"name\":\"ConnectTimeoutError\",\"code\":\"UND_ERR_CONNECT_TIMEOUT\",\"message\":\"Connect Timeout Error\"}}"}
+{"level":50,"time":1680318945166,"pid":21381,"hostname":"Ches-MacBook-Pro.local","msg":"Failed to enrich https://news.ycombinator.com/item?id=35384462 {\"cause\":{\"name\":\"ConnectTimeoutError\",\"code\":\"UND_ERR_CONNECT_TIMEOUT\",\"message\":\"Connect Timeout Error\"}}"}
+{"level":30,"time":1680318945195,"pid":21381,"hostname":"Ches-MacBook-Pro.local","msg":"Indexed https://github.com/twitter/the-algorithm"}
+{"level":30,"time":1680318945234,"pid":21381,"hostname":"Ches-MacBook-Pro.local","msg":"Indexed https://github.com/dosco/minds"}
+{"level":30,"time":1680318945239,"pid":21381,"hostname":"Ches-MacBook-Pro.local","msg":"Indexed https://news.ycombinator.com/item?id=35384462"}
+{"level":30,"time":1680318945239,"pid":21381,"hostname":"Ches-MacBook-Pro.local","msg":"Indexed https://hardpivot.substack.com/p/open-sourcing-my-y-combinator-winter"}
+{"level":30,"time":1680319022180,"pid":21381,"hostname":"Ches-MacBook-Pro.local","msg":"Received sync pocket request"}
+{"level":30,"time":1680319023179,"pid":21381,"hostname":"Ches-MacBook-Pro.local","msg":"Fetched "}
+{"level":30,"time":1680319023179,"pid":21381,"hostname":"Ches-MacBook-Pro.local","msg":"Processing https://github.com/twitter/the-algorithm"}
+{"level":30,"time":1680319023180,"pid":21381,"hostname":"Ches-MacBook-Pro.local","msg":"Processing https://www.fixie.ai/"}
+{"level":30,"time":1680319023181,"pid":21381,"hostname":"Ches-MacBook-Pro.local","msg":"Processing https://github.com/dosco/minds"}
+{"level":30,"time":1680319023182,"pid":21381,"hostname":"Ches-MacBook-Pro.local","msg":"Processing https://fly.io/ruby-dispatch/pairing-with-gpt-4/"}
+{"level":30,"time":1680319023182,"pid":21381,"hostname":"Ches-MacBook-Pro.local","msg":"Processing https://simonwillison.net/2023/Mar/27/ai-enhanced-development/"}
+{"level":30,"time":1680319023183,"pid":21381,"hostname":"Ches-MacBook-Pro.local","msg":"Processing https://hardpivot.substack.com/p/open-sourcing-my-y-combinator-winter"}
+{"level":30,"time":1680319023183,"pid":21381,"hostname":"Ches-MacBook-Pro.local","msg":"Processing https://vicuna.lmsys.org/"}
+{"level":30,"time":1680319023184,"pid":21381,"hostname":"Ches-MacBook-Pro.local","msg":"Processing https://news.ycombinator.com/item?id=35384462"}
+{"level":30,"time":1680319023184,"pid":21381,"hostname":"Ches-MacBook-Pro.local","msg":"Processing https://mp.weixin.qq.com/s/AxX-Q7njegNTAxMkYFwsfA"}
+{"level":30,"time":1680319023185,"pid":21381,"hostname":"Ches-MacBook-Pro.local","msg":"Processing https://www.newcomer.co/p/what-we-learned-at-the-cerebral-valley"}
+{"level":30,"time":1680319024568,"pid":21381,"hostname":"Ches-MacBook-Pro.local","msg":"Indexed https://www.fixie.ai/"}
+{"level":30,"time":1680319024569,"pid":21381,"hostname":"Ches-MacBook-Pro.local","msg":"Indexed https://simonwillison.net/2023/Mar/27/ai-enhanced-development/"}
+{"level":30,"time":1680319024742,"pid":21381,"hostname":"Ches-MacBook-Pro.local","msg":"Indexed https://www.newcomer.co/p/what-we-learned-at-the-cerebral-valley"}
+{"level":30,"time":1680319024743,"pid":21381,"hostname":"Ches-MacBook-Pro.local","msg":"Indexed https://mp.weixin.qq.com/s/AxX-Q7njegNTAxMkYFwsfA"}
+{"level":30,"time":1680319025066,"pid":21381,"hostname":"Ches-MacBook-Pro.local","msg":"Indexed https://github.com/twitter/the-algorithm"}
+{"level":30,"time":1680319025093,"pid":21381,"hostname":"Ches-MacBook-Pro.local","msg":"Indexed https://github.com/dosco/minds"}
+{"level":30,"time":1680319025113,"pid":21381,"hostname":"Ches-MacBook-Pro.local","msg":"Indexed https://fly.io/ruby-dispatch/pairing-with-gpt-4/"}
+{"level":30,"time":1680319025114,"pid":21381,"hostname":"Ches-MacBook-Pro.local","msg":"Indexed https://vicuna.lmsys.org/"}
+{"level":50,"time":1680319033184,"pid":21381,"hostname":"Ches-MacBook-Pro.local","msg":"Failed to enrich https://hardpivot.substack.com/p/open-sourcing-my-y-combinator-winter {\"cause\":{\"name\":\"ConnectTimeoutError\",\"code\":\"UND_ERR_CONNECT_TIMEOUT\",\"message\":\"Connect Timeout Error\"}}"}
+{"level":50,"time":1680319033185,"pid":21381,"hostname":"Ches-MacBook-Pro.local","msg":"Failed to enrich https://news.ycombinator.com/item?id=35384462 {\"cause\":{\"name\":\"ConnectTimeoutError\",\"code\":\"UND_ERR_CONNECT_TIMEOUT\",\"message\":\"Connect Timeout Error\"}}"}
+{"level":30,"time":1680319033214,"pid":21381,"hostname":"Ches-MacBook-Pro.local","msg":"Indexed https://news.ycombinator.com/item?id=35384462"}
+{"level":30,"time":1680319033217,"pid":21381,"hostname":"Ches-MacBook-Pro.local","msg":"Indexed https://hardpivot.substack.com/p/open-sourcing-my-y-combinator-winter"}
+{"level":30,"time":1680319112751,"pid":21822,"hostname":"Ches-MacBook-Pro.local","msg":"Received sync pocket request"}
+{"level":30,"time":1680319114073,"pid":21822,"hostname":"Ches-MacBook-Pro.local","msg":"Received sync pocket request"}
+{"level":30,"time":1680319114078,"pid":21822,"hostname":"Ches-MacBook-Pro.local","msg":"Skipped refreshing"}
+{"level":30,"time":1680319114104,"pid":21822,"hostname":"Ches-MacBook-Pro.local","msg":"Fetched "}
+{"level":30,"time":1680319114104,"pid":21822,"hostname":"Ches-MacBook-Pro.local","msg":"Processing https://waitbutwhy.com/2014/05/fermi-paradox.html"}
+{"level":30,"time":1680319114105,"pid":21822,"hostname":"Ches-MacBook-Pro.local","msg":"Processing http://kadekillary.work/"}
+{"level":30,"time":1680319114106,"pid":21822,"hostname":"Ches-MacBook-Pro.local","msg":"Processing https://mitadmissions.org/blogs/entry/how-to-draw-dotted-lines-on-chalkboards-mit-style/"}
+{"level":30,"time":1680319114106,"pid":21822,"hostname":"Ches-MacBook-Pro.local","msg":"Processing https://github.com/twitter/the-algorithm"}
+{"level":30,"time":1680319114107,"pid":21822,"hostname":"Ches-MacBook-Pro.local","msg":"Processing https://github.com/rosefromthedead/effing-mad"}
+{"level":30,"time":1680319114107,"pid":21822,"hostname":"Ches-MacBook-Pro.local","msg":"Processing https://www.fixie.ai/"}
+{"level":30,"time":1680319114108,"pid":21822,"hostname":"Ches-MacBook-Pro.local","msg":"Processing https://github.com/HigherOrderCO/HVM"}
+{"level":30,"time":1680319114109,"pid":21822,"hostname":"Ches-MacBook-Pro.local","msg":"Processing https://github.com/dosco/minds"}
+{"level":30,"time":1680319114109,"pid":21822,"hostname":"Ches-MacBook-Pro.local","msg":"Processing https://www.futurepedia.io/tool/ingestai"}
+{"level":30,"time":1680319114110,"pid":21822,"hostname":"Ches-MacBook-Pro.local","msg":"Processing https://gut-cli.dev/"}
+{"level":30,"time":1680319114652,"pid":21822,"hostname":"Ches-MacBook-Pro.local","msg":"Indexed https://www.futurepedia.io/tool/ingestai"}
+{"level":30,"time":1680319114652,"pid":21822,"hostname":"Ches-MacBook-Pro.local","msg":"Processing https://shashankrajput.github.io/Generative.pdf"}
+{"level":30,"time":1680319114663,"pid":21822,"hostname":"Ches-MacBook-Pro.local","msg":"Indexed https://gut-cli.dev/"}
+{"level":30,"time":1680319114663,"pid":21822,"hostname":"Ches-MacBook-Pro.local","msg":"Processing https://github.com/Picsart-AI-Research/Text2Video-Zero"}
+{"level":50,"time":1680319115338,"pid":21822,"hostname":"Ches-MacBook-Pro.local","msg":"Failed to enrich https://shashankrajput.github.io/Generative.pdf 'Unable to parse non text format application/pdf for now'"}
+{"level":30,"time":1680319115691,"pid":21822,"hostname":"Ches-MacBook-Pro.local","msg":"Indexed https://shashankrajput.github.io/Generative.pdf"}
+{"level":30,"time":1680319115691,"pid":21822,"hostname":"Ches-MacBook-Pro.local","msg":"Processing https://fly.io/ruby-dispatch/pairing-with-gpt-4/"}
+{"level":30,"time":1680319115692,"pid":21822,"hostname":"Ches-MacBook-Pro.local","msg":"Indexed https://www.fixie.ai/"}
+{"level":30,"time":1680319115692,"pid":21822,"hostname":"Ches-MacBook-Pro.local","msg":"Processing https://simonwillison.net/2023/Mar/24/datasette-chatgpt-plugin/"}
+{"level":30,"time":1680319115692,"pid":21822,"hostname":"Ches-MacBook-Pro.local","msg":"Indexed https://github.com/HigherOrderCO/HVM"}
+{"level":30,"time":1680319115692,"pid":21822,"hostname":"Ches-MacBook-Pro.local","msg":"Processing https://johanwind.github.io/2023/03/23/rwkv_overview.html"}
+{"level":30,"time":1680319115931,"pid":21822,"hostname":"Ches-MacBook-Pro.local","msg":"Indexed https://mitadmissions.org/blogs/entry/how-to-draw-dotted-lines-on-chalkboards-mit-style/"}
+{"level":30,"time":1680319115931,"pid":21822,"hostname":"Ches-MacBook-Pro.local","msg":"Processing https://oneusefulthing.substack.com/p/superhuman-what-can-ai-do-in-30-minutes"}
+{"level":30,"time":1680319115963,"pid":21822,"hostname":"Ches-MacBook-Pro.local","msg":"Indexed https://github.com/Picsart-AI-Research/Text2Video-Zero"}
+{"level":30,"time":1680319115963,"pid":21822,"hostname":"Ches-MacBook-Pro.local","msg":"Processing https://johanwind.github.io/2023/03/23/rwkv_details.html"}
+{"level":30,"time":1680319116174,"pid":21822,"hostname":"Ches-MacBook-Pro.local","msg":"Indexed https://waitbutwhy.com/2014/05/fermi-paradox.html"}
+{"level":30,"time":1680319116175,"pid":21822,"hostname":"Ches-MacBook-Pro.local","msg":"Processing https://blog.lastmileai.dev/using-openais-retrieval-plugin-with-llama-d2e0b6732f14"}
+{"level":30,"time":1680319116404,"pid":21822,"hostname":"Ches-MacBook-Pro.local","msg":"Indexed https://johanwind.github.io/2023/03/23/rwkv_overview.html"}
+{"level":30,"time":1680319116404,"pid":21822,"hostname":"Ches-MacBook-Pro.local","msg":"Processing https://github.com/transitive-bullshit/chatgpt-well-known-plugin-finder"}
+{"level":30,"time":1680319116425,"pid":21822,"hostname":"Ches-MacBook-Pro.local","msg":"Indexed https://simonwillison.net/2023/Mar/24/datasette-chatgpt-plugin/"}
+{"level":30,"time":1680319116425,"pid":21822,"hostname":"Ches-MacBook-Pro.local","msg":"Processing https://arxiv.org/abs/2303.14177"}
+{"level":30,"time":1680319116551,"pid":21822,"hostname":"Ches-MacBook-Pro.local","msg":"Indexed http://kadekillary.work/"}
+{"level":30,"time":1680319116551,"pid":21822,"hostname":"Ches-MacBook-Pro.local","msg":"Processing https://simonwillison.net/2023/Mar/27/ai-enhanced-development/"}
+{"level":30,"time":1680319116976,"pid":21822,"hostname":"Ches-MacBook-Pro.local","msg":"Indexed https://simonwillison.net/2023/Mar/27/ai-enhanced-development/"}
+{"level":30,"time":1680319116976,"pid":21822,"hostname":"Ches-MacBook-Pro.local","msg":"Processing https://news.ycombinator.com/item?id=35336113"}
+{"level":30,"time":1680319117163,"pid":21822,"hostname":"Ches-MacBook-Pro.local","msg":"Indexed https://fly.io/ruby-dispatch/pairing-with-gpt-4/"}
+{"level":30,"time":1680319117163,"pid":21822,"hostname":"Ches-MacBook-Pro.local","msg":"Processing https://neon.tech/blog/quicker-serverless-postgres"}
+{"level":30,"time":1680319117188,"pid":21822,"hostname":"Ches-MacBook-Pro.local","msg":"Indexed https://github.com/transitive-bullshit/chatgpt-well-known-plugin-finder"}
+{"level":30,"time":1680319117188,"pid":21822,"hostname":"Ches-MacBook-Pro.local","msg":"Processing https://www.cerebras.net/blog/cerebras-gpt-a-family-of-open-compute-efficient-large-language-models/"}
+{"level":30,"time":1680319117192,"pid":21822,"hostname":"Ches-MacBook-Pro.local","msg":"Indexed https://johanwind.github.io/2023/03/23/rwkv_details.html"}
+{"level":30,"time":1680319117192,"pid":21822,"hostname":"Ches-MacBook-Pro.local","msg":"Processing https://github.com/TaxyAI/browser-extension"}
+{"level":30,"time":1680319117496,"pid":21822,"hostname":"Ches-MacBook-Pro.local","msg":"Indexed https://github.com/TaxyAI/browser-extension"}
+{"level":30,"time":1680319117496,"pid":21822,"hostname":"Ches-MacBook-Pro.local","msg":"Processing https://github.com/nomic-ai/gpt4all"}
+{"level":30,"time":1680319117624,"pid":21822,"hostname":"Ches-MacBook-Pro.local","msg":"Indexed https://neon.tech/blog/quicker-serverless-postgres"}
+{"level":30,"time":1680319117624,"pid":21822,"hostname":"Ches-MacBook-Pro.local","msg":"Processing https://www.latent.space/p/shreya-shankar"}
+{"level":30,"time":1680319118176,"pid":21822,"hostname":"Ches-MacBook-Pro.local","msg":"Indexed https://arxiv.org/abs/2303.14177"}
+{"level":30,"time":1680319118176,"pid":21822,"hostname":"Ches-MacBook-Pro.local","msg":"Processing https://mp.weixin.qq.com/s/HVx-nUyJMBLElShJkQ5BeA"}
+{"level":30,"time":1680319118446,"pid":21822,"hostname":"Ches-MacBook-Pro.local","msg":"Indexed https://github.com/nomic-ai/gpt4all"}
+{"level":30,"time":1680319118446,"pid":21822,"hostname":"Ches-MacBook-Pro.local","msg":"Processing https://twitter.com/colinfortuner/status/1640791238063575040?s=12&t=uggwIEE53eDHUHusFHP9vA"}
+{"level":30,"time":1680319118705,"pid":21822,"hostname":"Ches-MacBook-Pro.local","msg":"Indexed https://www.latent.space/p/shreya-shankar"}
+{"level":30,"time":1680319118705,"pid":21822,"hostname":"Ches-MacBook-Pro.local","msg":"Processing https://arxiv.org/abs/2303.15714"}
+{"level":30,"time":1680319118922,"pid":21822,"hostname":"Ches-MacBook-Pro.local","msg":"Indexed https://www.cerebras.net/blog/cerebras-gpt-a-family-of-open-compute-efficient-large-language-models/"}
+{"level":30,"time":1680319118922,"pid":21822,"hostname":"Ches-MacBook-Pro.local","msg":"Processing https://arxiv.org/abs/2303.16199"}
+{"level":30,"time":1680319118927,"pid":21822,"hostname":"Ches-MacBook-Pro.local","msg":"Indexed https://mp.weixin.qq.com/s/HVx-nUyJMBLElShJkQ5BeA"}
+{"level":30,"time":1680319118927,"pid":21822,"hostname":"Ches-MacBook-Pro.local","msg":"Processing https://zhuanlan.zhihu.com/p/370385806?utm_medium=social&utm_oi=53248929038336&utm_psn=1624376761759752193&utm_source=wechat_timeline&utm_id=0"}
+{"level":30,"time":1680319119110,"pid":21822,"hostname":"Ches-MacBook-Pro.local","msg":"Indexed https://arxiv.org/abs/2303.15714"}
+{"level":30,"time":1680319119192,"pid":21822,"hostname":"Ches-MacBook-Pro.local","msg":"Indexed https://zhuanlan.zhihu.com/p/370385806?utm_medium=social&utm_oi=53248929038336&utm_psn=1624376761759752193&utm_source=wechat_timeline&utm_id=0"}
+{"level":30,"time":1680319119850,"pid":21822,"hostname":"Ches-MacBook-Pro.local","msg":"Indexed https://arxiv.org/abs/2303.16199"}
+{"level":50,"time":1680319125934,"pid":21822,"hostname":"Ches-MacBook-Pro.local","msg":"Failed to enrich https://oneusefulthing.substack.com/p/superhuman-what-can-ai-do-in-30-minutes {\"cause\":{\"name\":\"ConnectTimeoutError\",\"code\":\"UND_ERR_CONNECT_TIMEOUT\",\"message\":\"Connect Timeout Error\"}}"}
+{"level":30,"time":1680319125961,"pid":21822,"hostname":"Ches-MacBook-Pro.local","msg":"Indexed https://oneusefulthing.substack.com/p/superhuman-what-can-ai-do-in-30-minutes"}
+{"level":50,"time":1680319126980,"pid":21822,"hostname":"Ches-MacBook-Pro.local","msg":"Failed to enrich https://news.ycombinator.com/item?id=35336113 {\"cause\":{\"name\":\"ConnectTimeoutError\",\"code\":\"UND_ERR_CONNECT_TIMEOUT\",\"message\":\"Connect Timeout Error\"}}"}
+{"level":30,"time":1680319127025,"pid":21822,"hostname":"Ches-MacBook-Pro.local","msg":"Indexed https://news.ycombinator.com/item?id=35336113"}
+{"level":50,"time":1680319127170,"pid":21822,"hostname":"Ches-MacBook-Pro.local","msg":"Failed to enrich https://blog.lastmileai.dev/using-openais-retrieval-plugin-with-llama-d2e0b6732f14 {\"cause\":{\"name\":\"ConnectTimeoutError\",\"code\":\"UND_ERR_CONNECT_TIMEOUT\",\"message\":\"Connect Timeout Error\"}}"}
+{"level":30,"time":1680319127208,"pid":21822,"hostname":"Ches-MacBook-Pro.local","msg":"Indexed https://blog.lastmileai.dev/using-openais-retrieval-plugin-with-llama-d2e0b6732f14"}
+{"level":50,"time":1680319128450,"pid":21822,"hostname":"Ches-MacBook-Pro.local","msg":"Failed to enrich https://twitter.com/colinfortuner/status/1640791238063575040?s=12&t=uggwIEE53eDHUHusFHP9vA {\"cause\":{\"name\":\"ConnectTimeoutError\",\"code\":\"UND_ERR_CONNECT_TIMEOUT\",\"message\":\"Connect Timeout Error\"}}"}
+{"level":30,"time":1680319128486,"pid":21822,"hostname":"Ches-MacBook-Pro.local","msg":"Indexed https://twitter.com/colinfortuner/status/1640791238063575040?s=12&t=uggwIEE53eDHUHusFHP9vA"}

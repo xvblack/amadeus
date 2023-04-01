@@ -2,6 +2,7 @@ import { indexClient } from "../client";
 import { Post } from "../../shared/search/type";
 import { parseContent } from "../crawl";
 import { savePocketPost } from "./db";
+import { logger } from "../logger";
 
 export const saveAndIndexPost = async (post: Post) => {
   const enriched = await enrichPost(post);
@@ -19,7 +20,7 @@ export const enrichPost = async (post: Post) => {
       content,
     } as Post;
   } catch (error) {
-    console.error("Failed to enrich ", post.url, error);
+    logger.error("Failed to enrich %s %o", post.url, error);
     const errorMessage = `Failed to enrich ${post.url} ${error}`;
     return {
       ...post,

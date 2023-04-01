@@ -508,13 +508,13 @@ const Summarizer = () => {
 };
 
 const Refresh = () => {
-  const [numPost, setNumPost] = useState(10);
+  const [numPost, setNumPost] = useState("10");
   return (
     <>
       <input
         className="w-6"
         value={numPost}
-        onChange={(e) => setNumPost(parseInt(e.target.value))}
+        onChange={(e) => setNumPost(e.target.value)}
       ></input>
       <button
         onClick={async () => {
@@ -524,7 +524,7 @@ const Refresh = () => {
               "Context-Type": "application/json",
             },
             body: JSON.stringify({
-              limit: numPost,
+              limit: parseInt(numPost),
             }),
           });
         }}

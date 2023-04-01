@@ -5,7 +5,7 @@ X-TYPESENSE-API-KEY: xyz
 {
   "fields": [
     {
-      "name": "post_id",
+      "name": "html",
       "type": "string",
       "optional": true
     }

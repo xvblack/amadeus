@@ -3,6 +3,7 @@ import pLimit from "p-limit";
 import { retrieveAllPosts } from "../../../../service/pocket";
 import { saveAndIndexPost } from "../../../../service/post/post";
 import { redis } from "../../../../service/client";
+import { logger } from "../../../../service/logger";
 
 export interface SyncPocketRequest {
   limit: number;
@@ -19,14 +20,14 @@ const partitionArray = <T>(array: T[], batchSize: number) => {
 const TIMESTAMP_CACHE_KEY = "AMADEUS:LAST_SYNC_TIME";
 
 export const trySyncPocket = async (params: SyncPocketRequest) => {
-  console.log("Received sync pocket request");
+  logger.info("Received sync pocket request");
   const bestEffort = params.bestEffort;
   if (bestEffort) {
     const lastSynced = await redis().get(TIMESTAMP_CACHE_KEY);
     if (lastSynced !== null) {
       const lasySyncedEpoch = parseInt(lastSynced);
       if (Date.now() / 1000 - lasySyncedEpoch < 60) {
-        console.log("Skipped refreshing");
+        logger.info("Skipped refreshing");
         return false;
       }
     }
@@ -36,7 +37,7 @@ export const trySyncPocket = async (params: SyncPocketRequest) => {
     Math.ceil(Date.now() / 1000).toString()
   );
   const posts = await retrieveAllPosts({ limit: params.limit });
-  console.log("Fetched ", posts.length, " posts from pocket");
+  logger.info("Fetched ", posts.length, " posts from pocket");
   const batched = partitionArray(posts, 32);
   const lock = pLimit(10);
 
@@ -47,15 +48,15 @@ export const trySyncPocket = async (params: SyncPocketRequest) => {
       batch.map(async (post) => {
         return lock(async () => {
           try {
-            console.log(`Processing ${post.url}`);
+            logger.info(`Processing ${post.url}`);
             const indexed = await saveAndIndexPost(post);
-            console.log(`Indexed ${post.url}`);
+            logger.info(`Indexed ${post.url}`);
             return {
               url: post.url,
               status: "SUCCESS",
             };
           } catch (exception) {
-            console.log(exception);
+            logger.info(exception);
             return {
               url: post.url,
               status: `FAILED due to ${exception}`,
@@ -83,7 +84,7 @@ export async function POST(req: NextRequest) {
       result: result,
     });
   } catch (exception) {
-    console.log(exception);
+    logger.info(exception);
     return NextResponse.json(
       {
         message: `failed due to ${exception}`,
