@@ -23,6 +23,7 @@
     "dotenv-cli": "^7.0.0",
     "edgedb": "^1.1.0",
     "edn-data": "^1.0.0",
+    "encoding": "^0.1.13",
     "github-markdown-css": "^5.2.0",
     "html-to-text": "^9.0.4",
     "jotai": "^1.13.1",

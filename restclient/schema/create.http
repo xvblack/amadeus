@@ -1,10 +1,10 @@
 # POST http://192.168.31.181:8095/collections
 POST http://localhost:8095/collections
 Content-Type: application/json
-X-TYPESENSE-API-KEY: xyz
+X-TYPESENSE-API-KEY: {{$processEnv TYPESENSE_API_KEY}}
 
 {
-  "name": "post-20230328",
+  "name": "default",
   "fields": [
     {"name": "id", "type": "int32"},
     {"name": "url", "type": "string"},

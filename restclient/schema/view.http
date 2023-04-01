@@ -1,4 +1,4 @@
-PATCH http://192.168.31.181:8108/collections/pocket-index
+PATCH http://localhost:8095/collections/{{$processEnv TYPESENSE_INDEX_NAME}}
 Content-Type: application/json
 X-TYPESENSE-API-KEY: {{$processEnv TYPESENSE_API_KEY}}
        

@@ -3,12 +3,10 @@ export AMADEUS_HOST=localhost
 export DEFAULT_PATH=/search
 export REDIS_SERVER=redis://${AMADEUS_HOST}:8093
 
-export AMADEUS_POSTGRES_DATABASE_PASSWORD=mypostgrespassword
 export AMADEUS_POSTGRES_DATABASE_URL=postgres://postgres:${AMADEUS_POSTGRES_DATABASE_PASSWORD}@${AMADEUS_HOST}:8091/amadeus
 
 export TYPESENSE_ADDR=http://${AMADEUS_HOST}:8095/
-export TYPESENSE_API_KEY=xyz
-export TYPESENSE_INDEX_NAME=post-20230328
+export TYPESENSE_INDEX_NAME=default
 
 export EDGEDB_BIN='/Users/xvblack/Library/Application Support/edgedb/bin/edgedb'
 export AGTA_EDGEDB_SCHEMA_DIR='/Users/xvblack/Code/amadeus/.local/edgedb-schema'

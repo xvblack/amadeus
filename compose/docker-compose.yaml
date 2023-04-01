@@ -13,7 +13,7 @@ services:
       - TYPESENSE_ADDR=http://typesense:8108/
       - TYPESENSE_API_KEY=${TYPESENSE_API_KEY}
       - TYPESENSE_INDEX_NAME=${TYPESENSE_INDEX_NAME}
-      - REDIS_SERVER=redis://gpt-cache:6379
+      - REDIS_SERVER=redis://redis:6379
       - OPENAI_API_KEY=${OPENAI_API_KEY}
       - POCKET_CONSUMER_KEY=${POCKET_CONSUMER_KEY}
       - POCKET_ACCESS_TOKEN=${POCKET_ACCESS_TOKEN}
@@ -33,8 +33,8 @@ services:
       - "8091:5432"
     networks:
       - default
-  gpt-cache:
-    container_name: gpt-cache
+  redis:
+    container_name: redis
     image: redis:latest
     ports:
       - "8093:6379"
