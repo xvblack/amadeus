@@ -30,8 +30,6 @@ RUN sed -i '/browserClient/s/^/\/\//' ./node_modules/edgedb/dist/nodeClient.js
 RUN PRISMA_BINARIES_MIRROR=http://prisma-builds.s3-eu-west-1.amazonaws.com npx prisma generate
 RUN npm run build
 
-FROM edgedb/edgedb-cli:2.3.1 AS edgedb
-
 # Production image, copy all the files and run next
 FROM node:18 AS runner
 WORKDIR /app
@@ -43,15 +41,22 @@ ENV NODE_ENV production
 RUN addgroup --system --gid 1001 nodejs
 RUN adduser --system --uid 1001 nextjs
 
-COPY --from=builder /app/public ./public
-COPY --from=edgedb --chown=nextjs:nodejs /usr/bin/edgedb ./edgedb
 
 # Automatically leverage output traces to reduce image size
+# TODO: revert to custom server
 # https://nextjs.org/docs/advanced-features/output-file-tracing
+# COPY --from=builder --chown=nextjs:nodejs /app/.next/standalone/ ./
+# COPY --from=builder --chown=nextjs:nodejs /app/.next/standalone/app app
+# COPY --from=builder --chown=nextjs:nodejs /app/.next/standalone/node_modules node_modules
+# COPY --from=builder --chown=nextjs:nodejs /app/.next/standalone/app app
+# COPY --from=builder --chown=nextjs:nodejs /app/node_modules node_modules
+# COPY --from=builder --chown=nextjs:nodejs /app/public public
+# COPY --chown=nextjs:nodejs ./server.js ./server.js
+
+COPY --from=builder /app/public ./public
+
 COPY --from=builder --chown=nextjs:nodejs /app/.next/standalone ./
 COPY --from=builder --chown=nextjs:nodejs /app/.next/static ./.next/static
-
-RUN mkdir /edgedb-schema && chown nextjs:nodejs /edgedb-schema
 
 USER nextjs
 

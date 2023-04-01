@@ -7,12 +7,23 @@ const logger = require('pino-http')({},
   // pino.destination('./pino-http-log.log')
 )
 
+// Make sure commands gracefully respect termination signals (e.g. from Docker)
+// Allow the graceful termination to be manually configurable
+if (!process.env.NEXT_MANUAL_SIG_HANDLE) {
+  process.on('SIGTERM', () => process.exit(0))
+  process.on('SIGINT', () => process.exit(0))
+}
 
 const dev = process.env.NODE_ENV !== 'production'
 const hostname = '0.0.0.0'
 const port = 3000
 // when using middleware `hostname` and `port` must be provided below
-const app = next({ dev, hostname, port })
+const app = next({
+  dev, hostname, port,
+  conf: {
+    "experimental": { "appDir": true, }
+  }
+})
 const handle = app.getRequestHandler()
 
 app.prepare().then(() => {
