@@ -1,7 +1,7 @@
 import { redirect } from "next/navigation";
 
 const Home = () => {
-  redirect(process.env.DEFAULT_PATH ?? "/agta");
+  redirect("/search");
 };
 
 export default Home;
