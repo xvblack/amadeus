@@ -1,0 +1,24 @@
+{
+  "image": "mcr.microsoft.com/devcontainers/universal:2",
+  "features": {
+    "ghcr.io/meaningful-ooo/devcontainer-features/fish:1": {
+      "version": "latest"
+    },
+    "ghcr.io/christophermacgown/devcontainer-features/direnv:1": {
+      "version": "latest"
+    }
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "dbaeumer.vscode-eslint",
+        "github.vscode-github-actions",
+        "anweber.vscode-httpyac",
+        "esbenp.prettier-vscode",
+        "Prisma.prisma",
+        "bradlc.vscode-tailwindcss",
+        "rvest.vs-code-prettier-eslint"
+      ]
+    }
+  }
+}

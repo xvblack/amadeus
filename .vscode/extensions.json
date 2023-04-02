@@ -1,0 +1,11 @@
+{
+  "recommendations": [
+    "anweber.vscode-httpyac",
+    "dbaeumer.vscode-eslint",
+    "github.vscode-github-actions",
+    "esbenp.prettier-vscode",
+    "prisma.prisma",
+    "bradlc.vscode-tailwindcss",
+    "rvest.vs-code-prettier-eslint"
+  ]
+}
