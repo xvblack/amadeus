@@ -1,12 +1,9 @@
 import { NextRequest, NextResponse } from "next/server";
-import { searchClient } from "../../../service/client";
+import { searchPost } from "../../../service/post/typesense";
 
 export async function POST(req: NextRequest) {
   const params = await req.json();
-  const response = await searchClient()
-    .collections(process.env.TYPESENSE_INDEX_NAME!)
-    .documents()
-    .search(params, {});
+  const response = await searchPost(params);
   return NextResponse.json(response);
 }
 

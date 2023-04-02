@@ -1,5 +1,4 @@
 # port mapped via ssh
-export DEFAULT_PATH=/search
 export REDIS_SERVER=redis://localhost:9093
 export AMADEUS_POSTGRES_DATABASE_PASSWORD=${PROD_AMADEUS_POSTGRES_DATABASE_PASSWORD}
 export AMADEUS_POSTGRES_DATABASE_URL=postgres://postgres:${PROD_AMADEUS_POSTGRES_DATABASE_PASSWORD}@localhost:9091/amadeus

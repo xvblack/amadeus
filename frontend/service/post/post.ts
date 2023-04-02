@@ -1,13 +1,17 @@
-import { indexClient } from "../client";
 import { Post } from "../../shared/search/type";
 import { parseContent } from "../crawl";
 import { savePocketPost } from "./db";
 import { logger } from "../logger";
+import { indexPost } from "./typesense";
+import { qdrantIndexPost } from "./qdrant";
 
 export const saveAndIndexPost = async (post: Post) => {
   const enriched = await enrichPost(post);
   const saved = await savePocketPost(enriched);
   const indexed = await indexPost(saved);
+  if (process.env.ENABLE_QDRANT === "true") {
+    const embedIndexed = await qdrantIndexPost(saved);
+  }
 };
 
 export const enrichPost = async (post: Post) => {
@@ -28,15 +32,4 @@ export const enrichPost = async (post: Post) => {
       content: post.content ?? post.abstract ?? errorMessage,
     };
   }
-};
-
-export const indexPost = async (post: Post) => {
-  return await indexClient()
-    .collections(process.env.TYPESENSE_INDEX_NAME!)
-    .documents()
-    .upsert({
-      ...post,
-      id: post.id?.toString(),
-      links: JSON.stringify(post.links),
-    });
 };
