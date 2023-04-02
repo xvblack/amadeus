@@ -1,4 +1,4 @@
-import { JSDOM } from "jsdom";
+import { JSDOM, VirtualConsole } from "jsdom";
 import { Readability } from "@mozilla/readability";
 import axios from "axios";
 import { logger } from "../logger";
@@ -116,7 +116,11 @@ const enrichRawHtml = async (url: string): Promise<Content> => {
 };
 
 const htmlToArticle = (html: string) => {
-  const dom = new JSDOM(html);
+  const virtualConsole = new VirtualConsole();
+  virtualConsole.on("error", () => {
+    // No-op to skip console errors.
+  });
+  const dom = new JSDOM(html, { virtualConsole });
   const article = new Readability(dom.window.document).parse();
   return article;
 };
