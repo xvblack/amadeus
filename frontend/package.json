@@ -9,7 +9,7 @@
     "start": "next start",
     "lint": "next lint",
     "migrate:deploy-db": "npx prisma migrate deploy",
-    "migrate:recreate-typesense-index": "npx ts-node-esm scripts/recreaet-typesense-index.mts",
+    "migrate:recreate-typesense-index": "npx ts-node-esm scripts/recreate-typesense-index.mts",
     "migrate:recreate-qdrant-index": "npx ts-node-esm scripts/recreate-qdrant-index.mts"
   },
   "dependencies": {

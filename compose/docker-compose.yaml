@@ -78,6 +78,7 @@ services:
     networks:
       - default
   qdrant:
+    container_name: qdrant
     image: qdrant/qdrant:v1.0.3
     ports:
       - 8096:6333
