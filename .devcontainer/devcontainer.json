@@ -11,14 +11,15 @@
   "customizations": {
     "vscode": {
       "extensions": [
-        "dbaeumer.vscode-eslint",
-        "github.vscode-github-actions",
-        "anweber.vscode-httpyac",
-        "esbenp.prettier-vscode",
-        "Prisma.prisma",
-        "bradlc.vscode-tailwindcss",
-        "rvest.vs-code-prettier-eslint"
-      ]
+		"dbaeumer.vscode-eslint",
+		"github.vscode-github-actions",
+		"anweber.vscode-httpyac",
+		"esbenp.prettier-vscode",
+		"Prisma.prisma",
+		"bradlc.vscode-tailwindcss",
+		"rvest.vs-code-prettier-eslint",
+		"ms-azuretools.vscode-docker"
+	]
     }
   }
 }
