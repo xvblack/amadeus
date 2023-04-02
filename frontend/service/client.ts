@@ -1,20 +1,71 @@
 import "server-only";
-import createClient from "edgedb";
 import { Configuration, OpenAIApi } from "openai";
 import { SearchClient, Client } from "typesense";
 import { createClient as createRedisClient, RedisClientType } from "redis";
+import { container } from "./binding";
 
-const cachedClient =
-  <T>(name: string, provider: () => T): (() => T) =>
-  () => {
-    if (!Object.hasOwn(globalThis, name)) {
-      const client = provider();
-      (globalThis as any)[name] = client;
-      return client;
-    } else {
-      return (globalThis as any)[name];
-    }
-  };
+export const Symbols = {
+  SearchClient: Symbol.for("SearchClient"),
+  IndexClient: Symbol.for("IndexClient"),
+  OpenAIClient: Symbol.for("OpenAIClient"),
+  RedisClient: Symbol.for("RedisClient"),
+};
+
+container
+  .bind(Symbols.SearchClient)
+  .toDynamicValue(
+    () =>
+      new SearchClient({
+        apiKey: process.env.TYPESENSE_API_KEY!,
+        nodes: [parseTypesenseAddr(process.env.TYPESENSE_ADDR!)],
+        cacheSearchResultsForSeconds: 0,
+      })
+  )
+  .inSingletonScope();
+
+export const searchClient = () =>
+  container.get<SearchClient>(Symbols.SearchClient);
+
+container
+  .bind(Symbols.IndexClient)
+  .toDynamicValue(
+    () =>
+      new Client({
+        apiKey: process.env.TYPESENSE_API_KEY!,
+        nodes: [parseTypesenseAddr(process.env.TYPESENSE_ADDR!)],
+        cacheSearchResultsForSeconds: 0,
+      })
+  )
+  .inSingletonScope();
+
+export const indexClient = () => container.get<Client>(Symbols.IndexClient);
+
+container
+  .bind(Symbols.OpenAIClient)
+  .toDynamicValue(() => {
+    const configuration = new Configuration({
+      apiKey: process.env.OPENAI_API_KEY,
+    });
+    return new OpenAIApi(configuration);
+  })
+  .inSingletonScope();
+
+export const openai = () => container.get<OpenAIApi>(Symbols.OpenAIClient);
+
+container
+  .bind(Symbols.RedisClient)
+  .toDynamicValue(async () => {
+    const client = createRedisClient({
+      url: process.env.REDIS_SERVER,
+    });
+    await client.connect().then(() => {
+      console.log("REDIS connected");
+    });
+    return client;
+  })
+  .inSingletonScope();
+
+export const redis = () => container.get<RedisClientType>(Symbols.RedisClient);
 
 const parseTypesenseAddr = (addr: string) => {
   const match = addr.match(/([a-z]+):\/\/([^:]+):([0-9]+)(.*)/);
@@ -28,45 +79,3 @@ const parseTypesenseAddr = (addr: string) => {
     path: match[4],
   };
 };
-
-export const searchClient = cachedClient(
-  "typesenseSearch",
-  () =>
-    new SearchClient({
-      apiKey: process.env.TYPESENSE_API_KEY!,
-      nodes: [parseTypesenseAddr(process.env.TYPESENSE_ADDR!)],
-      cacheSearchResultsForSeconds: 0,
-    })
-);
-
-export const indexClient = cachedClient(
-  "typesenseReadwrite",
-  () =>
-    new Client({
-      apiKey: process.env.TYPESENSE_API_KEY!,
-      nodes: [parseTypesenseAddr(process.env.TYPESENSE_ADDR!)],
-      cacheSearchResultsForSeconds: 0,
-    })
-);
-
-export const openai = cachedClient("openai", () => {
-  const configuration = new Configuration({
-    apiKey: process.env.OPENAI_API_KEY,
-  });
-  return new OpenAIApi(configuration);
-});
-
-export const redis = cachedClient("redis", () => {
-  const client = createRedisClient({
-    url: process.env.REDIS_SERVER,
-  });
-  client.connect().then(() => {
-    console.log("REDIS connected");
-  });
-  return client;
-});
-
-export const edgedbClient = createClient({
-  dsn: process.env.AMADEUS_EDGEDB_DSN,
-  tlsSecurity: "insecure",
-});
