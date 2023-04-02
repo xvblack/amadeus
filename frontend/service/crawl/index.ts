@@ -6,8 +6,9 @@ import { logger } from "../logger";
 const TWITTER_PATTERN =
   /https:\/\/twitter.com\/([a-zA-Z0-9_-]+)\/status\/(\d+)/;
 const HN_PREMII_PATTERN = /http:\/\/hn.premii.com\/#\/comments\/(\d+)/;
+const ARXIV_ABS_PATTERN = /https:\/\/arxiv.org\/abs\/([0-9]+\.[a-zA-Z0-9-_]+)/;
 const ARXIV_PDF_PATTERN =
-  /https:\/\/arxiv.org\/pdf\/([0-9]+.[a-zA-Z0-9-_]+).pdf/;
+  /https:\/\/arxiv.org\/pdf\/([0-9]+\.[a-zA-Z0-9-_]+).pdf/;
 const OPEN_REVIEW_PDF_PATTERN =
   /https:\/\/openreview.net\/pdf\?id=([a-zA-Z0-9_-]+)/;
 const REDDIT_PATTERN =
@@ -79,6 +80,10 @@ const enrichTwitter = async (url: string) => {
 };
 
 const enrichRawHtml = async (url: string): Promise<Content> => {
+  const tags = [] as string[];
+  if (url.match(ARXIV_ABS_PATTERN)) {
+    tags.push("paper");
+  }
   const response = await axios.get(url);
 
   if (response.status >= 400) {
@@ -103,7 +108,7 @@ const enrichRawHtml = async (url: string): Promise<Content> => {
     return {
       title: article.title,
       content: article.content,
-      tags: [],
+      tags,
     };
   } else {
     throw `Unable to parse non text format ${contentType} for now`;

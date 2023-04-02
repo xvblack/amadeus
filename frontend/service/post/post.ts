@@ -16,12 +16,13 @@ export const saveAndIndexPost = async (post: Post) => {
 
 export const enrichPost = async (post: Post) => {
   try {
-    const { title, content } = await parseContent(post.url);
+    const { title, content, tags } = await parseContent(post.url);
 
     return {
       ...post,
       title,
       content,
+      tags: post.tags.concat(tags.filter((tag) => post.tags.indexOf(tag) < 0)),
     } as Post;
   } catch (error) {
     logger.error("Failed to enrich %s %o", post.url, error);

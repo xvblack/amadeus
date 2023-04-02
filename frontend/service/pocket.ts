@@ -13,6 +13,7 @@ interface PocketPost {
   excerpt?: string;
   item_id: string;
   top_image_url?: string;
+  // tags: string[];
 }
 
 interface PocketRetrieveResponse {
