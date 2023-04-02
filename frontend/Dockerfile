@@ -10,6 +10,13 @@ COPY package.json pnpm-lock.yaml ./
 # TODO: revert to frozen after resolving ERR_PNPM_FROZEN_LOCKFILE_WITH_OUTDATED_LOCKFILE
 RUN pnpm i --no-frozen-lockfile
 
+FROM node:18 AS toolkit
+WORKDIR /app
+COPY --from=deps /app/node_modules ./node_modules
+COPY . .
+
+ENTRYPOINT ["scripts/docker-entrypoint-toolkit.sh"]
+
 # Rebuild the source code only when needed
 FROM node:18 AS builder
 WORKDIR /app

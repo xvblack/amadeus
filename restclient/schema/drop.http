@@ -1,4 +1,0 @@
-
-DELETE http://localhost:8095/collections/default
-Content-Type: application/json
-X-TYPESENSE-API-KEY: {{$processEnv TYPESENSE_API_KEY}}
