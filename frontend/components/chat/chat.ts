@@ -54,6 +54,7 @@ export interface RoundContent {
 
 export interface ChatStateAtomColl {
   character: string;
+  hideSystemPrompt: boolean;
   dependentCharacters: string[];
   initialPrompt: Atom<Promise<Message> | Message>;
   contentAtomsAtom: Atom<Atom<Promise<RoundContent>>[]>;
@@ -100,12 +101,14 @@ export const chatStateAtom = ({
   dependentCharacters,
   operatingMode,
   initialPrompt,
+  hideSystemPrompt
 }: {
   character: string;
   dependentCharacters: string[];
   operatingMode: OperatingMode;
   initialPrompt: Atom<Promise<Message> | Message>;
   systemPromptFromAtom?: Atom<Promise<String>>;
+  hideSystemPrompt?: boolean;
 }): ChatStateAtomColl => {
   const stateAtom = atom({
     character,
@@ -204,6 +207,7 @@ export const chatStateAtom = ({
     stateAtom,
     actionAtom,
     latestAssistantResponseAtom,
+    hideSystemPrompt: hideSystemPrompt ?? false
   };
 };
 

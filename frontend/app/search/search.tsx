@@ -484,28 +484,36 @@ const SummarizeChat = () => {
     dependentCharacters: [],
     operatingMode: OperatingMode.ASSISTANT_FIRST,
     initialPrompt: searchResultAtom,
+    hideSystemPrompt: true,
   });
 
   // return <div>SUMMARIZE ON</div>;
   return <div>{<ChatBox chatAtom={chatState}></ChatBox>}</div>;
 };
 
+const summarizeAtom = atom(false);
+
 const Summarizer = () => {
-  const [summarizeOn, setSummarizeOn] = useState(false);
+  const summarizeOn = useAtomValue(summarizeAtom);
 
   return (
     <div>
       {summarizeOn && <SummarizeChat />}
-      <button
-        onClick={() => {
-          setSummarizeOn(true);
-        }}
-      >
-        Summarize
-      </button>
     </div>
   );
 };
+
+const ToggleSummarize = () => {
+  const setSummarizeOn = useSetAtom(summarizeAtom);
+
+  return <button
+        onClick={() => {
+          setSummarizeOn((old) => !old);
+        }}
+      >
+        SUM
+      </button>
+}
 
 const Refresh = () => {
   const [numPost, setNumPost] = useState("10");
@@ -553,6 +561,7 @@ export const Search = () => {
           <ChoosePageSize />
           <Toggles />
           <Refresh />
+          <ToggleSummarize />
         </div>
         <div className="md:overflow-x-clip">
           <Summarizer />

@@ -64,13 +64,14 @@ export const ChatBox = ({ chatAtom }: { chatAtom: ChatStateAtomColl }) => {
   const [input, setInput] = useState("");
   const formula = (chatAtom.initialPrompt as WithFormula).formula;
   const system =
+    chatAtom.hideSystemPrompt ? (<SystemPromptLine formula={"HIDED"}></SystemPromptLine>) : (
     formula !== undefined ? (
       <SystemPromptLine formula={formula}></SystemPromptLine>
     ) : roundAtoms.length > 0 ? (
       <ChatLine key={"system"} round={roundAtoms[0]}></ChatLine>
     ) : (
       <></>
-    );
+    ));
   return (
     <div className="w-full flex flex-col">
       <div>{chatAtom.character}</div>
