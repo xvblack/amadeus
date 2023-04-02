@@ -173,7 +173,6 @@ const LinkToDetail = ({ id }: { id: number }) => {
 };
 
 const MarkAsRead = ({ url, pocketId }: { url: string; pocketId: string }) => {
-  // const mutate = useMutate();
   const mutate = useSetAtom(queryResultAtom);
   const markAsRead = useCallback(async () => {
     if (pocketId) {
@@ -496,27 +495,26 @@ const summarizeAtom = atom(false);
 const Summarizer = () => {
   const summarizeOn = useAtomValue(summarizeAtom);
 
-  return (
-    <div>
-      {summarizeOn && <SummarizeChat />}
-    </div>
-  );
+  return <div>{summarizeOn && <SummarizeChat />}</div>;
 };
 
 const ToggleSummarize = () => {
   const setSummarizeOn = useSetAtom(summarizeAtom);
 
-  return <button
-        onClick={() => {
-          setSummarizeOn((old) => !old);
-        }}
-      >
-        SUM
-      </button>
-}
+  return (
+    <button
+      onClick={() => {
+        setSummarizeOn((old) => !old);
+      }}
+    >
+      SUM
+    </button>
+  );
+};
 
 const Refresh = () => {
   const [numPost, setNumPost] = useState("10");
+  const mutate = useSetAtom(queryResultAtom);
   return (
     <>
       <input
@@ -534,6 +532,9 @@ const Refresh = () => {
             body: JSON.stringify({
               limit: parseInt(numPost),
             }),
+          });
+          mutate({
+            type: "refetch",
           });
         }}
       >
