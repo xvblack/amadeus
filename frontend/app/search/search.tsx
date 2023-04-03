@@ -165,7 +165,7 @@ const Tag = ({ tag }: { tag: string }) => {
 const LinkToDetail = ({ id }: { id: number }) => {
   return (
     <TagStyled color="bg-transparent">
-      <a href={`/details/${id}`} target="_blank" rel="noreferrer">
+      <a href={`/search/details/${id}`} target="_blank" rel="noreferrer">
         Details
       </a>
     </TagStyled>

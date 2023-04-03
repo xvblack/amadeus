@@ -1,0 +1,8 @@
+POST {{$processEnv QDRANT_ADDR}}/collections/{{$processEnv QDRANT_INDEX_NAME}}/points/count
+Content-Type: application/json
+
+{
+    "filter": {
+    },
+    "exact": true
+}

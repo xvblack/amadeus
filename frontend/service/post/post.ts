@@ -16,12 +16,13 @@ export const saveAndIndexPost = async (post: Post) => {
 
 export const enrichPost = async (post: Post) => {
   try {
-    const { title, content, tags } = await parseContent(post.url);
+    const { title, content, abstract, tags } = await parseContent(post.url);
 
     return {
       ...post,
-      title,
-      content,
+      abstract: abstract ?? post.abstract,
+      title: title ?? post.title,
+      content: content ?? post.content,
       tags: post.tags.concat(tags.filter((tag) => post.tags.indexOf(tag) < 0)),
     } as Post;
   } catch (error) {

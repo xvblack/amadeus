@@ -41,8 +41,9 @@ const normalizeUrl = (url: string) => {
 };
 
 export interface Content {
-  title: string;
-  content: string;
+  title?: string;
+  abstract?: string;
+  content?: string;
   tags: string[];
 }
 
@@ -52,12 +53,36 @@ export const parseContent = async (url: string): Promise<Content> => {
   if (normalized.match(TWITTER_PATTERN)) {
     return enrichTwitter(normalized);
   }
+
+  if (normalized.match(ARXIV_ABS_PATTERN)) {
+    return enrichArxiv(normalized);
+  }
   //  else if (normalized.match(REDDIT_PATTERN)) {
   //   return enrichReddit(normalized);
   // }
   return enrichRawHtml(normalized);
 };
 
+const enrichArxiv = async (url: string) => {
+  const response = await axios.get(url);
+
+  const dom = createJSDom(response.data);
+  const doc = dom.window.document;
+  const title =
+    doc.getElementById("abs")?.getElementsByClassName("title").item(0)
+      ?.textContent ?? undefined;
+  const abstract =
+    doc.getElementById("abs")?.getElementsByClassName("abstract").item(0)
+      ?.textContent ?? undefined;
+  const content = abstract;
+
+  return {
+    title,
+    abstract,
+    content,
+    tags: ["paper"],
+  };
+};
 const enrichTwitter = async (url: string) => {
   const match = url.match(TWITTER_PATTERN);
   if (!match) {
@@ -74,6 +99,7 @@ const enrichTwitter = async (url: string) => {
   ).json();
   return {
     title: json["author_name"],
+    abstract: json["html"],
     content: json["html"],
     tags: [],
   };
@@ -81,9 +107,6 @@ const enrichTwitter = async (url: string) => {
 
 const enrichRawHtml = async (url: string): Promise<Content> => {
   const tags = [] as string[];
-  if (url.match(ARXIV_ABS_PATTERN)) {
-    tags.push("paper");
-  }
   const response = await axios.get(url);
 
   if (response.status >= 400) {
@@ -96,6 +119,7 @@ const enrichRawHtml = async (url: string): Promise<Content> => {
     const content = response.data as string;
     return {
       title: content.split("\n")[0],
+      abstract: content.split("\n").slice(0, 3).join("\n"),
       content: content,
       tags: [],
     };
@@ -107,6 +131,7 @@ const enrichRawHtml = async (url: string): Promise<Content> => {
     }
     return {
       title: article.title,
+      abstract: article.excerpt,
       content: article.content,
       tags,
     };
@@ -115,12 +140,16 @@ const enrichRawHtml = async (url: string): Promise<Content> => {
   }
 };
 
-const htmlToArticle = (html: string) => {
+const createJSDom = (html: string) => {
   const virtualConsole = new VirtualConsole();
   virtualConsole.on("error", () => {
     // No-op to skip console errors.
   });
-  const dom = new JSDOM(html, { virtualConsole });
+  return new JSDOM(html, { virtualConsole });
+};
+
+const htmlToArticle = (html: string) => {
+  const dom = createJSDom(html);
   const article = new Readability(dom.window.document).parse();
   return article;
 };
