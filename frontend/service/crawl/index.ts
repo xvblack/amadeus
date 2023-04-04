@@ -89,14 +89,8 @@ const enrichTwitter = async (url: string) => {
     throw "Unexpect";
   }
   const publishUrl = `https://publish.twitter.com/oembed?dnt=true&omit_script=true&url=https://mobile.twitter.com/i/status/${match[1]}`;
-  const json = await (
-    await fetch(publishUrl, {
-      headers: {
-        "Content-Type": "application/json",
-      },
-      cache: "no-store",
-    })
-  ).json();
+  console.log({ publishUrl });
+  const json = await (await axios.get(publishUrl)).data;
   return {
     title: json["author_name"],
     abstract: json["html"],
