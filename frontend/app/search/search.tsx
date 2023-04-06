@@ -190,7 +190,7 @@ const MarkAsRead = ({ url, pocketId }: { url: string; pocketId: string }) => {
         type: "refetch",
       });
     }
-  }, [pocketId, url]);
+  }, [mutate, pocketId, url]);
   return (
     <TagStyled color="bg-transparent">
       <a
@@ -513,15 +513,9 @@ const ToggleSummarize = () => {
 };
 
 const Refresh = () => {
-  const [numPost, setNumPost] = useState("10");
   const mutate = useSetAtom(queryResultAtom);
   return (
     <>
-      <input
-        className="w-6"
-        value={numPost}
-        onChange={(e) => setNumPost(e.target.value)}
-      ></input>
       <button
         onClick={async () => {
           await fetch("/api/pocket/sync-pocket", {
@@ -530,7 +524,7 @@ const Refresh = () => {
               "Context-Type": "application/json",
             },
             body: JSON.stringify({
-              limit: parseInt(numPost),
+              limit: 500,
             }),
           });
           mutate({

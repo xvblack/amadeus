@@ -22,9 +22,11 @@ interface PocketRetrieveResponse {
 
 export const retrieveAllPosts = async ({
   limit,
+  since,
   search,
 }: {
   limit: number;
+  since: number;
   search?: string;
 }) => {
   const response = await typedFetch<PocketRetrieveResponse>({
@@ -36,6 +38,7 @@ export const retrieveAllPosts = async ({
       state: "all",
       count: limit.toString(),
       search: search,
+      since: since,
     },
   });
 
