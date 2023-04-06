@@ -11,7 +11,7 @@
   },
   "scripts": {
     "dev": "next dev",
-    "dev-server": "npx ts-node-esm server.ts",
+    "dev-server": "npx ts-node-esm server",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
