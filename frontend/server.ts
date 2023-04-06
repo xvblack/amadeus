@@ -6,8 +6,6 @@ import pino from "pino";
 import pinoHTTP from "pino-http";
 const logger = pinoHTTP({});
 
-import { a } from "./shared/search/type";
-console.log({ a });
 import { install } from "./service/cron/pocket";
 install();
 

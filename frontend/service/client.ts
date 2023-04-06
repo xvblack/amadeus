@@ -1,5 +1,3 @@
-import "server-only";
-import createClient from "edgedb";
 import { Configuration, OpenAIApi } from "openai";
 import { SearchClient, Client } from "typesense";
 import { createClient as createRedisClient, RedisClientType } from "redis";
@@ -64,9 +62,4 @@ export const redis = cachedClient("redis", () => {
     console.log("REDIS connected");
   });
   return client;
-});
-
-export const edgedbClient = createClient({
-  dsn: process.env.AMADEUS_EDGEDB_DSN,
-  tlsSecurity: "insecure",
 });
