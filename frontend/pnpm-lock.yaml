@@ -7,6 +7,7 @@ specifiers:
   '@tailwindcss/line-clamp': ^0.4.2
   '@tanstack/query-core': ^4.27.0
   '@types/dagre': ^0.7.48
+  '@types/html-to-text': ^9.0.0
   '@types/jest': ^29.4.0
   '@types/jsdom': ^21.1.0
   '@types/node': 18.11.10
@@ -57,7 +58,6 @@ specifiers:
   swr: ^2.0.0
   tailwindcss: ^3.2.4
   ts-node: ^10.9.1
-  tsconfig-paths: ^4.2.0
   typescript: 4.9.3
   typesense: ^1.5.3
   uuid: ^9.0.0
@@ -110,6 +110,7 @@ dependencies:
 
 devDependencies:
   '@edgedb/generate': registry.npmmirror.com/@edgedb/generate/0.0.8_edgedb@1.1.0
+  '@types/html-to-text': registry.npmmirror.com/@types/html-to-text/9.0.0
   '@types/jest': registry.npmmirror.com/@types/jest/29.4.0
   '@types/node': registry.npmmirror.com/@types/node/18.11.10
   '@types/psl': registry.npmmirror.com/@types/psl/1.1.0
@@ -123,7 +124,6 @@ devDependencies:
   prisma: registry.npmmirror.com/prisma/4.11.0
   tailwindcss: registry.npmmirror.com/tailwindcss/3.2.4_v776zzvn44o7tpgzieipaairwm
   ts-node: 10.9.1_eoe7put6ewfbqpy6gs36tihw6y
-  tsconfig-paths: registry.npmmirror.com/tsconfig-paths/4.2.0
   typescript: registry.npmmirror.com/typescript/4.9.3
 
 packages:
@@ -1954,6 +1954,12 @@ packages:
     dependencies:
       '@types/unist': registry.npmmirror.com/@types/unist/2.0.6
     dev: false
+
+  registry.npmmirror.com/@types/html-to-text/9.0.0:
+    resolution: {integrity: sha512-FnF3p2FJZ1kJT/0C/lmBzw7HSlH3RhtACVYyrwUsJoCmFNuiLpusWT2FWWB7P9A48CaYpvD6Q2fprn7sZeffpw==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@types/html-to-text/-/html-to-text-9.0.0.tgz}
+    name: '@types/html-to-text'
+    version: 9.0.0
+    dev: true
 
   registry.npmmirror.com/@types/http-cache-semantics/4.0.1:
     resolution: {integrity: sha512-SZs7ekbP8CN0txVG2xVRH6EgKmEm31BOxA07vkFaETzZz1xh+cbt8BcI0slpymvwhx5dlFnQG2rTlPVQn+iRPQ==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@types/http-cache-semantics/-/http-cache-semantics-4.0.1.tgz}
@@ -7860,17 +7866,6 @@ packages:
     dependencies:
       '@types/json5': registry.npmmirror.com/@types/json5/0.0.29
       json5: registry.npmmirror.com/json5/1.0.1
-      minimist: registry.npmmirror.com/minimist/1.2.7
-      strip-bom: registry.npmmirror.com/strip-bom/3.0.0
-    dev: true
-
-  registry.npmmirror.com/tsconfig-paths/4.2.0:
-    resolution: {integrity: sha512-NoZ4roiN7LnbKn9QqE1amc9DJfzvZXxF4xDavcOWt1BPkdx+m+0gJuPM+S0vCe7zTJMYUP0R8pO2XMr+Y8oLIg==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/tsconfig-paths/-/tsconfig-paths-4.2.0.tgz}
-    name: tsconfig-paths
-    version: 4.2.0
-    engines: {node: '>=6'}
-    dependencies:
-      json5: registry.npmmirror.com/json5/2.2.3
       minimist: registry.npmmirror.com/minimist/1.2.7
       strip-bom: registry.npmmirror.com/strip-bom/3.0.0
     dev: true

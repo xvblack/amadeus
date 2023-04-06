@@ -1,7 +1,8 @@
 {
   "compilerOptions": {
-    "target": "es2022",
-    "lib": ["dom", "dom.iterable", "esnext"],
+    "target": "ES2022",
+    "lib": ["dom", "ES2022"],
+    "outDir": "dist/",
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
@@ -29,9 +30,9 @@
     "service/**/*.mts",
     ".next/types/**/*.ts"
   ],
-  // "exclude": ["node_modules"],
   "ts-node": {
-    // Do not forget to `npm i -D tsconfig-paths`
-    "require": ["tsconfig-paths/register"]
-  }
+    "esm": true,
+    "experimentalSpecifierResolution": "node"
+  },
+  "exclude": ["node_modules"]
 }
