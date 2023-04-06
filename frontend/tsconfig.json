@@ -22,10 +22,16 @@
   },
   "include": [
     "next-env.d.ts",
+    "server.ts",
     "**/*.ts",
     "**/*.tsx",
     "**/*.mts",
+    "service/**/*.mts",
     ".next/types/**/*.ts"
   ],
-  "exclude": ["node_modules"]
+  // "exclude": ["node_modules"],
+  "ts-node": {
+    // Do not forget to `npm i -D tsconfig-paths`
+    "require": ["tsconfig-paths/register"]
+  }
 }

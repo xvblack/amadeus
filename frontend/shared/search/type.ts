@@ -11,3 +11,5 @@ export interface Post {
   abstract?: string;
   content?: string;
 }
+
+export const a = "1";

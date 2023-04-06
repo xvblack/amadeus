@@ -2,9 +2,16 @@
   "name": "pocket-explorer",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
+  "postcss": {
+    "plugins": {
+      "tailwindcss": {},
+      "autoprefixer": {}
+    }
+  },
   "scripts": {
     "dev": "next dev",
-    "dev-server": "node server.js",
+    "dev-server": "npx ts-node-esm server.ts",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
@@ -73,6 +80,7 @@
     "prisma": "^4.11.0",
     "tailwindcss": "^3.2.4",
     "ts-node": "^10.9.1",
+    "tsconfig-paths": "^4.2.0",
     "typescript": "4.9.3"
   }
 }
