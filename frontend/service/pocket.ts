@@ -2,7 +2,7 @@ import { typedFetch } from "../components/utils/fetch";
 import { Post } from "../shared/search/type";
 import { logger } from "./logger";
 
-const { convert } = require("html-to-text");
+import { convert } from "html-to-text";
 
 interface PocketPost {
   given_url: string;
@@ -22,9 +22,11 @@ interface PocketRetrieveResponse {
 
 export const retrieveAllPosts = async ({
   limit,
+  since,
   search,
 }: {
   limit: number;
+  since: number;
   search?: string;
 }) => {
   const response = await typedFetch<PocketRetrieveResponse>({
@@ -36,6 +38,7 @@ export const retrieveAllPosts = async ({
       state: "all",
       count: limit.toString(),
       search: search,
+      since: since,
     },
   });
 

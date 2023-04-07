@@ -16,7 +16,7 @@ export const typedFetch = async <T>({
 }: {
   method: string;
   path: string;
-  query?: Record<string, string | undefined>;
+  query?: Record<string, string | number | undefined>;
   body?: Record<string, any>;
 }): Promise<FetchResponse<T>> => {
   const url = query

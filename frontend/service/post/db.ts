@@ -3,6 +3,19 @@ import { PrismaClient } from "@prisma/client";
 
 const prisma = new PrismaClient();
 
+export const fetchLatestPocketPost = async () => {
+  return await prisma.post.findFirst({
+    where: {
+      source: "pocket",
+    },
+    orderBy: [
+      {
+        time_added: "desc",
+      },
+    ],
+  });
+};
+
 export const fetchPost = async ({
   url,
   source,

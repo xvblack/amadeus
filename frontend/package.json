@@ -2,11 +2,19 @@
   "name": "pocket-explorer",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
+  "postcss": {
+    "plugins": {
+      "tailwindcss": {},
+      "autoprefixer": {}
+    }
+  },
   "scripts": {
     "dev": "next dev",
-    "dev-server": "node server.js",
-    "build": "next build",
+    "dev-server": "npx ts-node-esm server",
+    "build": "next build && npx tsc",
     "start": "next start",
+    "start-server": "node --experimental-loader=extensionless dist/server.js",
     "lint": "next lint",
     "migrate:deploy-db": "npx prisma migrate deploy",
     "migrate:recreate-typesense-index": "npx ts-node-esm scripts/recreate-typesense-index.mts",
@@ -27,6 +35,7 @@
     "edgedb": "^1.1.0",
     "edn-data": "^1.0.0",
     "encoding": "^0.1.13",
+    "extensionless": "^1.3.4",
     "github-markdown-css": "^5.2.0",
     "html-to-text": "^9.0.4",
     "jotai": "^1.13.1",
@@ -60,6 +69,7 @@
   },
   "devDependencies": {
     "@edgedb/generate": "^0.0.8",
+    "@types/html-to-text": "^9.0.0",
     "@types/jest": "^29.4.0",
     "@types/node": "18.11.10",
     "@types/psl": "^1.1.0",

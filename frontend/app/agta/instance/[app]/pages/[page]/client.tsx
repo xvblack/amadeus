@@ -94,7 +94,7 @@ export const Select = ({
   updateOps: { name: string; op: (values: Record<string, any>) => void }[];
 }) => {
   const inputs = useMemo(() => parseInputs(code), [code]);
-  const formStateAtom = useMemo(() => atom({} as Record<string, any>), [code]);
+  const formStateAtom = useMemo(() => atom({} as Record<string, any>), []);
 
   const [result, setResult] = useState(undefined as any);
   const values = useAtomValue(formStateAtom);
