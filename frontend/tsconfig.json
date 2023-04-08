@@ -1,16 +1,12 @@
 {
   "compilerOptions": {
     "target": "ES2022",
-    "lib": [
-      "dom",
-      "ES2022"
-    ],
+    "lib": ["dom", "ES2022"],
     "outDir": "dist/",
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
     "forceConsistentCasingInFileNames": true,
-    // "noEmit": true,
     "esModuleInterop": true,
     "module": "esnext",
     "moduleResolution": "node",
@@ -22,8 +18,7 @@
       {
         "name": "next"
       }
-    ],
-    "noEmit": true
+    ]
   },
   "include": [
     "next-env.d.ts",
@@ -38,7 +33,5 @@
     "esm": true,
     "experimentalSpecifierResolution": "node"
   },
-  "exclude": [
-    "node_modules"
-  ]
+  "exclude": ["node_modules"]
 }
