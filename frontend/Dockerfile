@@ -7,8 +7,7 @@ RUN npm i -g pnpm
 
 # Install dependencies based on the preferred package manager
 COPY package.json pnpm-lock.yaml ./
-# TODO: revert to frozen after resolving ERR_PNPM_FROZEN_LOCKFILE_WITH_OUTDATED_LOCKFILE
-RUN pnpm i --no-frozen-lockfile
+RUN pnpm i --frozen-lockfile
 
 FROM node:18 AS toolkit
 WORKDIR /app
@@ -31,7 +30,7 @@ COPY . .
 # If using npm comment out above and use below instead
 RUN PRISMA_BINARIES_MIRROR=http://prisma-builds.s3-eu-west-1.amazonaws.com npx prisma generate
 ENV NODE_ENV production
-RUN npm run build && npx tsc
+RUN npx tsc && npm run build
 
 # Production image, copy all the files and run next
 FROM node:18 AS runner
