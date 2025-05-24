@@ -1,4 +1,4 @@
-import { Configuration, OpenAIApi } from "openai";
+import { OpenAI } from "openai";
 import { SearchClient, Client } from "typesense";
 import { createClient as createRedisClient, RedisClientType } from "redis";
 
@@ -48,10 +48,9 @@ export const indexClient = cachedClient(
 );
 
 export const openai = cachedClient("openai", () => {
-  const configuration = new Configuration({
+  return new OpenAI({
     apiKey: process.env.OPENAI_API_KEY,
   });
-  return new OpenAIApi(configuration);
 });
 
 export const redis = cachedClient("redis", () => {

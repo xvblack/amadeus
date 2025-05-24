@@ -7,7 +7,6 @@ services:
       - postgres
       - redis
       - typesense
-      - qdrant
     ports:
       - 8090:3000
     image: ghcr.io/xvblack/amadeus:main
@@ -75,12 +74,6 @@ services:
     command: --data-dir /data --api-key=${TYPESENSE_API_KEY}
     networks:
       - default
-  qdrant:
-    container_name: qdrant
-    image: qdrant/qdrant:v1.0.3
-    ports:
-      - 8096:6333
-      - 8097:6334
   watchtower:
     container_name: watchtower
     image: containrrr/watchtower

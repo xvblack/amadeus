@@ -2,7 +2,7 @@
 import React, { useCallback, useEffect, useMemo, useState } from "react";
 import { Hit, QueryState, queryStateInit } from "./schema";
 import { atomWithLocation } from "jotai-location";
-import { atomsWithQuery } from "jotai-tanstack-query";
+import { atomWithQuery } from "jotai-tanstack-query";
 import { atom } from "jotai/vanilla";
 import { useAtomValue, useSetAtom } from "jotai/react";
 import { chatStateAtom, OperatingMode } from "../../components/chat/chat";
@@ -96,7 +96,7 @@ const fetcher = (params: any) =>
     body: JSON.stringify(params),
   }).then((res) => res.json());
 
-const [queryResultAtom] = atomsWithQuery((get) => ({
+const queryResultAtom = atomWithQuery((get) => ({
   keepPreviousData: true,
   queryKey: ["search", get(getQueryAtom)] as [string, QueryState],
   queryFn: async ({
@@ -108,6 +108,7 @@ const [queryResultAtom] = atomsWithQuery((get) => ({
     const query = toQuery(queryState);
     const response = await fetcher(query);
 
+    console.log("Response", response);
     return {
       requestTimestamp: Date.now(),
       hits: response.hits?.map((hit: any) => ({
@@ -254,10 +255,10 @@ const Hit = ({ titleOnly, hit }: { titleOnly: boolean; hit: Hit }) => {
 
 const MyHits = () => {
   const queryState = useAtomValue(getQueryAtom);
-  const { hits } = useAtomValue(queryResultAtom);
+  const {status, data} = useAtomValue(queryResultAtom);
   return (
     <div>
-      {hits.map((hit) => (
+      {data?.hits.map((hit) => (
         <Hit key={hit.id} hit={hit} titleOnly={queryState.titleOnly}></Hit>
       ))}
     </div>

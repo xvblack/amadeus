@@ -1,7 +1,7 @@
 import { JSDOM, VirtualConsole } from "jsdom";
 import { Readability } from "@mozilla/readability";
 import axios from "axios";
-import { logger } from "../logger";
+
 
 const TWITTER_PATTERN =
   /https:\/\/twitter.com\/([a-zA-Z0-9_-]+)\/status\/(\d+)/;

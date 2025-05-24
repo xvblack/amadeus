@@ -5,9 +5,7 @@ services:
     restart: always
     depends_on:
       - postgres
-      - redis
       - typesense
-      - qdrant
     ports:
       - 8090:3000
     build:
@@ -19,7 +17,6 @@ services:
       - TYPESENSE_ADDR=http://typesense:8108/
       - TYPESENSE_API_KEY=${TYPESENSE_API_KEY}
       - TYPESENSE_INDEX_NAME=${TYPESENSE_INDEX_NAME}
-      - REDIS_SERVER=redis://redis:6379
       - OPENAI_API_KEY=${OPENAI_API_KEY}
       - POCKET_CONSUMER_KEY=${POCKET_CONSUMER_KEY}
       - POCKET_ACCESS_TOKEN=${POCKET_ACCESS_TOKEN}
@@ -55,34 +52,20 @@ services:
     volumes:
       - 'postgres-data:/var/lib/postgresql/data/pgdata'
     ports:
-      - "8091:5432"
-    networks:
-      - default
-  redis:
-    container_name: redis
-    image: redis:latest
-    ports:
-      - "8093:6379"
-    restart: unless-stopped
+      - "5432:5432"
     networks:
       - default
   typesense:
     container_name: typesense
     restart: unless-stopped
     ports:
-      - 8095:8108
+      - 8108:8108
     volumes:
       - 'typesense:/data'
     image: 'typesense/typesense:0.23.1'
     command: --data-dir /data --api-key=${TYPESENSE_API_KEY}
     networks:
       - default
-  qdrant:
-    container_name: qdrant
-    image: qdrant/qdrant:v1.0.3
-    ports:
-      - 8096:6333
-      - 8097:6334
 
 volumes:
   typesense:

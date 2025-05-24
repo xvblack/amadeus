@@ -3,15 +3,11 @@ import { parseContent } from "../crawl";
 import { savePocketPost } from "./db";
 import { logger } from "../logger";
 import { indexPost } from "./typesense";
-import { qdrantIndexPost } from "./qdrant";
 
 export const saveAndIndexPost = async (post: Post) => {
   const enriched = await enrichPost(post);
   const saved = await savePocketPost(enriched);
   const indexed = await indexPost(saved);
-  if (process.env.ENABLE_QDRANT === "true") {
-    const embedIndexed = await qdrantIndexPost(saved);
-  }
 };
 
 export const enrichPost = async (post: Post) => {

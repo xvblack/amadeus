@@ -1,7 +1,7 @@
 import { Atom } from "jotai/vanilla";
 import { useAtomValue, useSetAtom } from "jotai/react";
 import { useMemo, useState } from "react";
-import { ReactMarkdown } from "react-markdown/lib/react-markdown";
+import Markdown from "react-markdown";
 import "github-markdown-css/github-markdown-light.css";
 import {
   ChatStateAtomColl,
@@ -35,9 +35,9 @@ export const ChatLine = ({ round }: { round: Atom<Promise<RoundContent>> }) => {
           {value.role}
         </div>
         :{" "}
-        <ReactMarkdown className="markdown-body">
+        <Markdown>
           {value.content.raw}
-        </ReactMarkdown>
+        </Markdown>
       </div>
     );
   }
