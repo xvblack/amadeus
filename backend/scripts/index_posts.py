@@ -14,7 +14,28 @@ from data_types import Post
 import tqdm
 import click
 
+async def ensure_collection_exists() -> None:
+    collections = typesense_client.collections.retrieve()
+    if not any(collection['name'] == os.getenv('TYPESENSE_INDEX_NAME') for collection in collections):
+        typesense_client.collections.create({
+            'name': os.getenv('TYPESENSE_INDEX_NAME'),
+            'fields': [
+                { 'name': "id", 'type': "int32" },
+                { 'name': "url", 'type': "string" },
+                { 'name': "time_added", 'type': "int64" },
+                { 'name': "time_added_as_date", 'type': "string", 'optional': True },
+                { 'name': "source", 'type': "string" },
+                { 'name': "tags", 'type': "string[]", 'facet': True },
+                { 'name': "title", 'type': "string" },
+                { 'name': "abstract", 'type': "string" },
+                { 'name': "content", 'type': "string" },
+                { 'name': "html", 'type': "string", 'optional': True },
+                { 'name': ".*", 'type': "auto" },
+            ],
+        })
+
 async def index_post(post: Post) -> None:
+    # check if the collection exists
     collection = typesense_client.collections[os.getenv('TYPESENSE_INDEX_NAME')]
     post['id'] = str(post['id'])
     post['links'] = json.dumps(post['links'])
@@ -23,6 +44,7 @@ async def index_post(post: Post) -> None:
     print(f"Indexed post {post['id']}")
 
 async def run_indexing(limit, page_size=100, concurrency=10):
+    await ensure_collection_exists()
     semaphore = asyncio.Semaphore(concurrency)
     async def index_post_with_semaphore(post: Post) -> None:
         async with semaphore:
