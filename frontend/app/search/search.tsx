@@ -61,7 +61,11 @@ const updateQueryAtom = atom(null, async (get, set, update: UpdateQuery) => {
       curr.currentPage = update.page;
     } else if (update.diff) {
       const newPage = curr.currentPage + update.diff;
-      const numPages = (await get(queryResultAtom)).data!.numPages;
+      const {data: queryResult, isPending, isError} = useAtomValue(queryResultAtom);
+      if (isPending || isError) {
+        return;
+      }
+      const numPages = queryResult.numPages;
       if (newPage >= 1 && newPage <= numPages) {
         curr.currentPage = newPage;
       }
@@ -340,7 +344,7 @@ const ChoosePageSize = () => {
 const usePagination = () => {
   const queryState = useAtomValue(getQueryAtom);
   const updateQuery = useSetAtom(updateQueryAtom);
-  const queryResult = useAtomValue(queryResultAtom).data!;
+  const {data: queryResult, isPending, isError} = useAtomValue(queryResultAtom);
   const pages = [];
   for (
     let i = Math.max(1, queryState.currentPage - 3);
@@ -467,7 +471,14 @@ const useKeyboardControl = () => {
 };
 
 const SummarizeChat = () => {
-  const {hits} = useAtomValue(queryResultAtom).data!;
+  const {data: queryResult, isPending, isError} = useAtomValue(queryResultAtom);
+  if (isPending) {
+    return <div>Loading...</div>;
+  }
+  if (isError) {
+    return <div>Error</div>;
+  }
+  const hits = queryResult.hits;
   const searchResultAtom = useMemo(
     () =>
       atom({
