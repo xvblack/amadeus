@@ -1,7 +1,7 @@
 version: '3.3'
 services:
   amadeus-backend-cron:
-    container_name: amadeus-backend
+    container_name: amadeus-backend-cron
     restart: always
     build:
       context: ./backend/
@@ -16,7 +16,7 @@ services:
       - POCKET_ACCESS_TOKEN=${POCKET_ACCESS_TOKEN}
       - SUPABASE_URL=${SUPABASE_URL}
       - SUPABASE_SERVICE_ROLE_KEY=${SUPABASE_SERVICE_ROLE_KEY}
-    entrypoint: ["/bin/sh", "-c", "while true; do uv run scripts/index_posts.py; sleep 30; done"]
+    entrypoint: ["/bin/sh", "-c", "while true; do PYTHONPATH=/app uv run scripts/index_posts.py; sleep 30; done"]
 
   amadeus:
     container_name: amadeus
