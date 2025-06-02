@@ -345,6 +345,14 @@ const usePagination = () => {
   const queryState = useAtomValue(getQueryAtom);
   const updateQuery = useSetAtom(updateQueryAtom);
   const {data: queryResult, isPending, isError} = useAtomValue(queryResultAtom);
+  if (isPending || isError) {
+    return {
+      pages: [],
+      nbPages: 0,
+      refine: () => {},
+      currentRefinement: queryState.currentPage,
+    };
+  }
   const pages = [];
   for (
     let i = Math.max(1, queryState.currentPage - 3);
