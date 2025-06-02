@@ -14,12 +14,13 @@ services:
       - OPENAI_API_KEY=${OPENAI_API_KEY}
       - POCKET_CONSUMER_KEY=${POCKET_CONSUMER_KEY}
       - POCKET_ACCESS_TOKEN=${POCKET_ACCESS_TOKEN}
-      
+      - SUPABASE_URL=${SUPABASE_URL}
+      - SUPABASE_KEY=${SUPABASE_KEY}
+
   amadeus:
     container_name: amadeus
     restart: always
     depends_on:
-      - postgres
       - typesense
     ports:
       - 8090:3000
@@ -35,7 +36,6 @@ services:
       - OPENAI_API_KEY=${OPENAI_API_KEY}
       - POCKET_CONSUMER_KEY=${POCKET_CONSUMER_KEY}
       - POCKET_ACCESS_TOKEN=${POCKET_ACCESS_TOKEN}
-      - AMADEUS_POSTGRES_DATABASE_URL=postgres://postgres:${AMADEUS_POSTGRES_DATABASE_PASSWORD}@postgres:5432/amadeus
       - DEFAULT_PATH=/search
     networks:
       - default
@@ -52,14 +52,14 @@ services:
     networks:
       - default
 
-  watchtower:
-    container_name: watchtower
-    image: containrrr/watchtower
-    volumes:
-      - /var/run/docker.sock:/var/run/docker.sock
-    environment:
-      - WATCHTOWER_LABEL_ENABLE=1
-    command: --interval 30
+  # watchtower:
+  #   container_name: watchtower
+  #   image: containrrr/watchtower
+  #   volumes:
+  #     - /var/run/docker.sock:/var/run/docker.sock
+  #   environment:
+  #     - WATCHTOWER_LABEL_ENABLE=1
+  #   command: --interval 30
 
 volumes:
   typesense:

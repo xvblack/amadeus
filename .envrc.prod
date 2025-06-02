@@ -1,6 +1,0 @@
-# port mapped via ssh
-export REDIS_SERVER=redis://localhost:9093
-export AMADEUS_POSTGRES_DATABASE_PASSWORD=${PROD_AMADEUS_POSTGRES_DATABASE_PASSWORD}
-export AMADEUS_POSTGRES_DATABASE_URL=postgres://postgres:${PROD_AMADEUS_POSTGRES_DATABASE_PASSWORD}@localhost:9091/amadeus
-export TYPESENSE_ADDR=http://$localhost:9095/
-export TYPESENSE_INDEX_NAME=default
