@@ -52,7 +52,7 @@ const SystemPromptLine = ({ formula }: { formula: string }) => {
         SYSTEM
       </div>
       {": "}
-      <ReactMarkdown className="markdown-body">{formula}</ReactMarkdown>
+      {/* <ReactMarkdown className="markdown-body">{formula}</ReactMarkdown> */}
     </div>
   );
 };
