@@ -72,6 +72,13 @@ services:
     networks:
       - default
 
+  cloudflare-tunnel:
+    container_name: cloudflare-tunnel
+    restart: unless-stopped
+    image: cloudflare/cloudflared:latest
+    command: tunnel --no-autoupdate run --token ${CLOUDFLARE_TUNNEL_TOKEN}
+    networks:
+      - default
   # watchtower:
   #   container_name: watchtower
   #   image: containrrr/watchtower
