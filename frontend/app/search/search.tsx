@@ -472,32 +472,33 @@ const useKeyboardControl = () => {
 
 const SummarizeChat = () => {
   const {data: queryResult, isPending, isError} = useAtomValue(queryResultAtom);
-  if (isPending) {
-    return <div>Loading...</div>;
-  }
-  if (isError) {
-    return <div>Error</div>;
-  }
-  const hits = queryResult.hits;
-  const searchResultAtom = useMemo(
-    () =>
-      atom({
-        raw: `The user is browsing a list of web pages representing by their titles. You shall first respond with a summary tagging the pages into different categories. Output in markdown format.
-        The pages are:
-        ${hits.map((hit) => hit.title!.slice(0, 100)).join("\n")}`,
-      }),
-    [hits]
-  );
-  const chatState = chatStateAtom({
-    character: "summarizer",
-    dependentCharacters: [],
-    operatingMode: OperatingMode.ASSISTANT_FIRST,
-    initialPrompt: searchResultAtom,
-    hideSystemPrompt: true,
-  });
+  return "Deprecated";
+  // if (isPending) {
+  //   return <div>Loading...</div>;
+  // }
+  // if (isError) {
+  //   return <div>Error</div>;
+  // }
+  // const hits = queryResult.hits;
+  // const searchResultAtom = useMemo(
+  //   () =>
+  //     atom({
+  //       raw: `The user is browsing a list of web pages representing by their titles. You shall first respond with a summary tagging the pages into different categories. Output in markdown format.
+  //       The pages are:
+  //       ${hits.map((hit) => hit.title!.slice(0, 100)).join("\n")}`,
+  //     }),
+  //   [hits]
+  // );
+  // const chatState = chatStateAtom({
+  //   character: "summarizer",
+  //   dependentCharacters: [],
+  //   operatingMode: OperatingMode.ASSISTANT_FIRST,
+  //   initialPrompt: searchResultAtom,
+  //   hideSystemPrompt: true,
+  // });
 
-  // return <div>SUMMARIZE ON</div>;
-  return <div>{<ChatBox chatAtom={chatState}></ChatBox>}</div>;
+  // // return <div>SUMMARIZE ON</div>;
+  // return <div>{<ChatBox chatAtom={chatState}></ChatBox>}</div>;
 };
 
 const summarizeAtom = atom(false);
