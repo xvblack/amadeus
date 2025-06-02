@@ -35,13 +35,12 @@ async def ensure_collection_exists() -> None:
         })
 
 async def index_post(post: Post) -> None:
-    # check if the collection exists
     collection = typesense_client.collections[os.getenv('TYPESENSE_INDEX_NAME')]
     post['id'] = str(post['id'])
     post['links'] = json.dumps(post['links'])
     post['content'] = post['content'] or ''
     collection.documents.upsert(post)
-    print(f"Indexed post {post['id']}")
+    print(f"Indexed post {post['url']}")
 
 async def run_indexing(limit, page_size=100, concurrency=10):
     await ensure_collection_exists()
