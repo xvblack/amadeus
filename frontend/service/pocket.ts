@@ -49,7 +49,13 @@ export const retrieveAllPosts = async ({
 
   const posts = Object.values(response.data!.list);
 
-  return posts.map((post) => ({
+  return posts.filter((post) => {
+    if (!post["given_url"]) {
+      logger.error("Invalid post %o", post);
+      return false;
+    }
+    return true;
+  }).map((post) => ({
     url: post["given_url"],
     time_added: parseInt(post["time_added"]),
     source: "pocket",

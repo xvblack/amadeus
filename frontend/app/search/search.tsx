@@ -513,31 +513,31 @@ const ToggleSummarize = () => {
   );
 };
 
-const Refresh = () => {
-  const mutate = useSetAtom(queryResultAtom);
-  return (
-    <>
-      <button
-        onClick={async () => {
-          await fetch("/api/pocket/sync-pocket", {
-            method: "POST",
-            headers: {
-              "Context-Type": "application/json",
-            },
-            body: JSON.stringify({
-              limit: 500,
-            }),
-          });
-          mutate({
-            type: "refetch",
-          });
-        }}
-      >
-        SYNC
-      </button>
-    </>
-  );
-};
+// const Refresh = () => {
+//   const mutate = useSetAtom(queryResultAtom);
+//   return (
+//     <>
+//       <button
+//         onClick={async () => {
+//           await fetch("/api/pocket/sync-pocket", {
+//             method: "POST",
+//             headers: {
+//               "Context-Type": "application/json",
+//             },
+//             body: JSON.stringify({
+//               limit: 500,
+//             }),
+//           });
+//           mutate({
+//             type: "refetch",
+//           });
+//         }}
+//       >
+//         SYNC
+//       </button>
+//     </>
+//   );
+// };
 
 export const Search = () => {
   useKeyboardControl();
@@ -556,7 +556,7 @@ export const Search = () => {
           <Pagination />
           <ChoosePageSize />
           <Toggles />
-          <Refresh />
+          {/* <Refresh /> */}
           <ToggleSummarize />
         </div>
         <div className="md:overflow-x-clip">

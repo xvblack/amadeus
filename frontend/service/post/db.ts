@@ -43,7 +43,6 @@ export const savePocketPost = async (post: Post) => {
 };
 
 export const savePocketPosts = async (posts: Post[]) => {
-  console.log("Saving posts", posts);
   return Promise.all(
     posts.map(async (post) => {
       const saved = await prisma.post.upsert({

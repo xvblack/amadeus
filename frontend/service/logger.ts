@@ -1,6 +1,6 @@
 import pino, { LoggerOptions } from "pino";
 
-export const logger = pino<LoggerOptions>(
+export const logger = pino(
   {}
   // pino.destination("./pino-logger.log")
 );

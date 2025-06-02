@@ -22,6 +22,7 @@ model Post {
   abstract   String?
   content    String?
   html       String?
+  index_status String? @default("pending")
 
   @@unique([source, url])
 }

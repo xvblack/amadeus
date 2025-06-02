@@ -11,17 +11,18 @@
   },
   "scripts": {
     "dev": "next dev",
-    "dev-server": "npx ts-node-esm server",
+    "dev-server": "npx tsx server",
     "build": "next build && npx tsc",
     "start": "next start",
     "start-server": "node --experimental-loader=extensionless dist/server.js",
     "lint": "next lint",
     "migrate:deploy-db": "npx prisma migrate deploy",
-    "migrate:recreate-typesense-index": "npx ts-node scripts/recreate-typesense-index.ts"
+    "migrate:recreate-typesense-index": "npx tsx scripts/recreate-typesense-index.ts"
   },
   "dependencies": {
     "@mozilla/readability": "^0.6.0",
     "@prisma/client": "^6.8.2",
+    "@supabase/supabase-js": "^2.49.8",
     "@tailwindcss/line-clamp": "^0.4.4",
     "@tailwindcss/postcss": "^4.1.7",
     "@tanstack/query-core": "^5.77.0",
@@ -65,6 +66,8 @@
     "redis": "^5.1.0",
     "server-only": "^0.0.1",
     "swr": "^2.3.3",
+    "tqdm": "^2.0.3",
+    "ts-tqdm": "^0.8.6",
     "typesense": "^2.0.3",
     "uuid": "^11.1.0"
   },
@@ -83,7 +86,6 @@
     "postcss": "^8.5.3",
     "prisma": "^6.8.2",
     "tailwindcss": "^4.1.7",
-    "ts-node": "^10.9.2",
     "typescript": "5.8.3"
   }
 }
