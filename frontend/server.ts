@@ -6,9 +6,6 @@ import pino from "pino";
 import pinoHTTP from "pino-http";
 const logger = pinoHTTP({});
 
-import { install } from "./service/cron/pocket";
-install();
-
 // Make sure commands gracefully respect termination signals (e.g. from Docker)
 // Allow the graceful termination to be manually configurable
 if (!process.env.NEXT_MANUAL_SIG_HANDLE) {
@@ -24,9 +21,6 @@ const app = next({
   dev,
   hostname,
   port,
-  conf: {
-    experimental: { appDir: true },
-  },
 });
 const handle = app.getRequestHandler();
 

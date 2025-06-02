@@ -61,7 +61,7 @@ const updateQueryAtom = atom(null, async (get, set, update: UpdateQuery) => {
       curr.currentPage = update.page;
     } else if (update.diff) {
       const newPage = curr.currentPage + update.diff;
-      const numPages = (await get(queryResultAtom)).numPages;
+      const numPages = (await get(queryResultAtom)).data!.numPages;
       if (newPage >= 1 && newPage <= numPages) {
         curr.currentPage = newPage;
       }
@@ -187,9 +187,7 @@ const MarkAsRead = ({ url, pocketId }: { url: string; pocketId: string }) => {
           pocket_id: pocketId,
         }),
       });
-      mutate({
-        type: "refetch",
-      });
+      mutate();
     }
   }, [mutate, pocketId, url]);
   return (
@@ -207,7 +205,7 @@ const MarkAsRead = ({ url, pocketId }: { url: string; pocketId: string }) => {
   );
 };
 
-const Hit = ({ titleOnly, hit }: { titleOnly: boolean; hit: Hit }) => {
+const MyHit = ({ titleOnly, hit }: { titleOnly: boolean; hit: Hit }) => {
   const pocketId = hit.attrs?.pocket_id;
   const shouldShowMarkAsRead =
     pocketId && hit.tags.indexOf("pocket:unread") >= 0;
@@ -259,7 +257,7 @@ const MyHits = () => {
   return (
     <div>
       {data?.hits.map((hit) => (
-        <Hit key={hit.id} hit={hit} titleOnly={queryState.titleOnly}></Hit>
+        <MyHit key={hit.id} hit={hit} titleOnly={queryState.titleOnly}></MyHit>
       ))}
     </div>
   );
@@ -342,7 +340,7 @@ const ChoosePageSize = () => {
 const usePagination = () => {
   const queryState = useAtomValue(getQueryAtom);
   const updateQuery = useSetAtom(updateQueryAtom);
-  const queryResult = useAtomValue(queryResultAtom);
+  const queryResult = useAtomValue(queryResultAtom).data!;
   const pages = [];
   for (
     let i = Math.max(1, queryState.currentPage - 3);
@@ -469,7 +467,7 @@ const useKeyboardControl = () => {
 };
 
 const SummarizeChat = () => {
-  const { hits } = useAtomValue(queryResultAtom);
+  const {hits} = useAtomValue(queryResultAtom).data!;
   const searchResultAtom = useMemo(
     () =>
       atom({
