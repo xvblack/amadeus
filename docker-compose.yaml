@@ -3,6 +3,8 @@ services:
   amadeus-backend:
     container_name: amadeus-backend
     restart: always
+    depends_on:
+      - typesense
     build:
       context: ./backend/
       dockerfile: Dockerfile
@@ -16,12 +18,14 @@ services:
       - POCKET_ACCESS_TOKEN=${POCKET_ACCESS_TOKEN}
       - SUPABASE_URL=${SUPABASE_URL}
       - SUPABASE_SERVICE_ROLE_KEY=${SUPABASE_SERVICE_ROLE_KEY}
-    entrypoint: ["/bin/sh", "-c", "PYTHONPATH=/app uv run app:app --host 0.0.0.0 --port 8000"]
+    entrypoint: ["/bin/sh", "-c", "cd /app && uv run app:app --host 0.0.0.0 --port 8000"]
 
   
   amadeus-backend-cron:
     container_name: amadeus-backend-cron
     restart: always
+    depends_on:
+      - typesense
     build:
       context: ./backend/
       dockerfile: Dockerfile
