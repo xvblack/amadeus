@@ -9,6 +9,8 @@ services:
       context: ./backend/
       dockerfile: Dockerfile
     image: xvblack/amadeus-backend
+    ports:
+      - 8000:8000
     environment:
       - TYPESENSE_ADDR=http://typesense:8108/
       - TYPESENSE_API_KEY=${TYPESENSE_API_KEY}

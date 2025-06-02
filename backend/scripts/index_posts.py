@@ -38,6 +38,8 @@ async def index_post(post: Post) -> None:
     collection = typesense_client.collections[os.getenv('TYPESENSE_INDEX_NAME')]
     post['id'] = str(post['id'])
     post['links'] = json.dumps(post['links'])
+    post['title'] = post['title'] or ''
+    post['abstract'] = post['abstract'] or ''
     post['content'] = post['content'] or ''
     collection.documents.upsert(post)
     print(f"Indexed post {post['url']}")
