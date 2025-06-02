@@ -1,23 +1,14 @@
 # Install dependencies only when needed
-FROM node:18 AS deps
+FROM node:22 AS deps
 # Check https://github.com/nodejs/docker-node/tree/b4117f9333da4138b03a546ec926ef50a31506c3#nodealpine to understand why libc6-compat might be needed.
 WORKDIR /app
 
-RUN npm i -g pnpm
-
 # Install dependencies based on the preferred package manager
-COPY package.json pnpm-lock.yaml ./
-RUN pnpm i --frozen-lockfile
-
-FROM node:18 AS toolkit
-WORKDIR /app
-COPY --from=deps /app/node_modules ./node_modules
-COPY . .
-
-ENTRYPOINT ["scripts/docker-entrypoint-toolkit.sh"]
+COPY package.json package-lock.json ./
+RUN npm install
 
 # Rebuild the source code only when needed
-FROM node:18 AS builder
+FROM node:22 AS builder
 WORKDIR /app
 COPY --from=deps /app/node_modules ./node_modules
 COPY . .
@@ -28,17 +19,13 @@ COPY . .
 # ENV NEXT_TELEMETRY_DISABLED 1
 
 # If using npm comment out above and use below instead
-RUN PRISMA_BINARIES_MIRROR=http://prisma-builds.s3-eu-west-1.amazonaws.com npx prisma generate
-ENV NODE_ENV production
-RUN npx tsc && npm run build
+RUN npm run build
 
 # Production image, copy all the files and run next
-FROM node:18 AS runner
+FROM node:22 AS runner
 WORKDIR /app
 
 ENV NODE_ENV production
-# Uncomment the following line in case you want to disable telemetry during runtime.
-# ENV NEXT_TELEMETRY_DISABLED 1
 
 RUN addgroup --system --gid 1001 nodejs
 RUN adduser --system --uid 1001 nextjs
