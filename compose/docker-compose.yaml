@@ -1,5 +1,20 @@
 version: '3.3'
 services:
+  amadeus-backend:
+    container_name: amadeus-backend
+    restart: always
+    build:
+      context: ../backend/
+      dockerfile: Dockerfile
+    image: xvblack/amadeus-backend
+    environment:
+      - TYPESENSE_ADDR=http://typesense:8108/
+      - TYPESENSE_API_KEY=${TYPESENSE_API_KEY}
+      - TYPESENSE_INDEX_NAME=${TYPESENSE_INDEX_NAME}
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+      - POCKET_CONSUMER_KEY=${POCKET_CONSUMER_KEY}
+      - POCKET_ACCESS_TOKEN=${POCKET_ACCESS_TOKEN}
+      
   amadeus:
     container_name: amadeus
     restart: always
@@ -24,37 +39,7 @@ services:
       - DEFAULT_PATH=/search
     networks:
       - default
-  amadeus-toolkit:
-    container_name: amadeus-toolkit
-    build:
-      context: ../frontend/
-      dockerfile: Dockerfile
-      target: toolkit
-    image: xvblack/amadeus-toolkit
-    environment:
-      - TYPESENSE_ADDR=http://typesense:8108/
-      - TYPESENSE_API_KEY=${TYPESENSE_API_KEY}
-      - TYPESENSE_INDEX_NAME=${TYPESENSE_INDEX_NAME}
-      - REDIS_SERVER=redis://redis:6379
-      - OPENAI_API_KEY=${OPENAI_API_KEY}
-      - POCKET_CONSUMER_KEY=${POCKET_CONSUMER_KEY}
-      - POCKET_ACCESS_TOKEN=${POCKET_ACCESS_TOKEN}
-      - AMADEUS_POSTGRES_DATABASE_URL=postgres://postgres:${AMADEUS_POSTGRES_DATABASE_PASSWORD}@postgres:5432/amadeus
-    networks:
-      - default
-  postgres:
-    container_name: postgres
-    image: postgres:15.2
-    restart: unless-stopped
-    environment:
-      - POSTGRES_PASSWORD=${AMADEUS_POSTGRES_DATABASE_PASSWORD}
-      - PGDATA=/var/lib/postgresql/data/pgdata
-    volumes:
-      - 'postgres-data:/var/lib/postgresql/data/pgdata'
-    ports:
-      - "5432:5432"
-    networks:
-      - default
+
   typesense:
     container_name: typesense
     restart: unless-stopped
@@ -62,14 +47,22 @@ services:
       - 8108:8108
     volumes:
       - 'typesense:/data'
-    image: 'typesense/typesense:0.23.1'
+    image: 'typesense/typesense:29.0.rc27'
     command: --data-dir /data --api-key=${TYPESENSE_API_KEY}
     networks:
       - default
 
+  watchtower:
+    container_name: watchtower
+    image: containrrr/watchtower
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    environment:
+      - WATCHTOWER_LABEL_ENABLE=1
+    command: --interval 30
+
 volumes:
   typesense:
-  postgres-data:
 
 networks:
   default:
